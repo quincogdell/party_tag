@@ -8,7 +8,8 @@ gem 'twitter'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem "omniauth-facebook"
+gem "koala"
 
 # Gems used only for assets and not required
 # in production environments by default.
