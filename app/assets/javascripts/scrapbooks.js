@@ -8,6 +8,8 @@ var Scrapbook = {};
 
 $(document).ready(function() {
   Scrapbook.setEventListeners();
+  Scrapbook.queryInstagram();
+  Scrapbook.queryTwitter();
 
 });
 
