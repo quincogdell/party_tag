@@ -1,0 +1,15 @@
+<h1><%= @user.name %></h1>
+
+Your events:
+<ul>
+<% @events.each do |event| %>
+<li><%= link_to event.name, "/events/#{event.id}" %></li>
+<% end %>
+</ul>
+
+Your Scrapbooks:
+<ul>
+<% @books.each do |book| %>
+<li><%= link_to "#{book.name}, from #{book.event}", "/scrapbooks/#{book.id}" %></li>
+<% end %>
+</ul>
