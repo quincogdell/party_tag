@@ -1,5 +1,9 @@
 class ScrapbooksController < ApplicationController
   def show
-    raise
+    #raise
+    @event = Scrapbook.event_id
+    #binding.pry
   end
+
+
 end
