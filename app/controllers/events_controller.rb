@@ -26,4 +26,17 @@ class EventsController < ApplicationController
 
     render :json => JSON.generate(res_array)
   end
+  def new
+    @event = Event.new
+  end
+  def create
+    event = Event.new(params[:event])
+    event.user_id = session[:user_id]
+    event.save
+    tags = params[:tags].split(", ")
+    tags.each do |tag|
+      HashTag.create({tag_name: tag, event_id: event.id})
+    end
+    redirect_to "/"
+  end
 end
