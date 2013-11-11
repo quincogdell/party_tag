@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     tags = params[:tags].split(", ")
     tags.each do |tag|
       HashTag.create({tag_name: tag, event_id: event.id})
-    redirect_to "/"
     end
+    redirect_to "/"
   end
 end
