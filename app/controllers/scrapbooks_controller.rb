@@ -1,7 +1,8 @@
 class ScrapbooksController < ApplicationController
   def show
-    #raise
-    @event = Scrapbook.event_id
+
+    @scrapbook = Scrapbook.find(params[:id])
+    @event = Event.find(@scrapbook.event_id)
     #binding.pry
   end
 
