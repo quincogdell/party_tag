@@ -15,10 +15,12 @@ class EventsController < ApplicationController
   end
   def create
     event = Event.new(params[:event])
+    event.user_id = session[:user_id]
     event.save
     tags = params[:tags].split(", ")
     tags.each do |tag|
       HashTag.create({tag_name: tag, event_id: event.id})
+    redirect_to "/"
     end
   end
 end
