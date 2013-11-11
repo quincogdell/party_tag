@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
+User.delete_all
+Event.delete_all
+HashTag.delete_all
+Scrapbook.delete_all
 
 u1 = User.new(name: 'cooper mayne')
 
@@ -13,7 +17,7 @@ e1 = Event.new(title: 'party tag programming week')
 
 h1 = HashTag.new(tag_name: '#partytagworkweed')
 
-scrap1 = Scrapbook.new()
+scrap1 = Scrapbook.new(name: 'the first scrap book')
 
 e1.hash_tags << h1
 e1.scrapbooks << scrap1
