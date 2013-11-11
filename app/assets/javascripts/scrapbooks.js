@@ -2,14 +2,29 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-var scrapbook = {};
+var Scrapbook = {};
+
+
 
 $(document).ready(function() {
-  scrapbook.setEventListeners();
+  Scrapbook.setEventListeners();
 
 });
 
 
-scrapbook.setEventListeners = function() {
+Scrapbook.setEventListeners = function() {
+
+};
+
+Scrapbook.queryInstagram = function() {
+  var testTag = "PartyTagWorkWeek";
+  var clientID = "?client_id=7201ce9799fa4f4b9d5b4ece1d9f8251";
+  var url = "https://api.instagram.com/v1/";
+  var queryItem = "/tags/" + testTag + "media";
+
+  var queryString = url + queryItem + testTag + clientID;
+
+
+
 
 };
