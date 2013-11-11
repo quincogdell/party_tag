@@ -10,4 +10,15 @@ class EventsController < ApplicationController
     #spit back tweets that match given event (in json)
     binding.pry
   end
+  def new
+    @event = Event.new
+  end
+  def create
+    event = Event.new(params[:event])
+    event.save
+    tags = params[:tags].split(", ")
+    tags.each do |tag|
+      HashTag.create({tag_name: tag, event_id: event.id})
+    end
+  end
 end

@@ -10,6 +10,6 @@
 #
 
 class HashTag < ActiveRecord::Base
-  attr_accessible :tag_name
+  attr_accessible :tag_name, :event_id
   belongs_to :event
 end
