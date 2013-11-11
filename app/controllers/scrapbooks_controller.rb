@@ -2,7 +2,7 @@ class ScrapbooksController < ApplicationController
   def show
 
     @scrapbook = Scrapbook.find(params[:id])
-    @event = Event.find(@scrapbook.event_id)
+    @event = @scrapbook.event
     #binding.pry
   end
 
