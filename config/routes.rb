@@ -5,6 +5,8 @@ SecondProject::Application.routes.draw do
   # first created -> highest priority.
   root to: "users#show"
 
+  get "/login" => "sessions#new"
+
   resources :users
   resources :events
   resources :scrapbooks do

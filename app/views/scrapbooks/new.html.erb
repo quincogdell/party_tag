@@ -1,0 +1,8 @@
+
+<%= form_for @scrapbook  do |t| %>
+  <%= t.label "Event Name" %>
+  <%= t.text_field "title" %>
+  <%= label_tag "Hash tags to track, separated by commas" %>
+  <%= text_field_tag "tags" %>
+  <%= t.submit %>
+<% end%>
