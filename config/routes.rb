@@ -1,4 +1,6 @@
 SecondProject::Application.routes.draw do
+  get "events/get_tweets"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   root to: "users#show"
@@ -11,6 +13,8 @@ SecondProject::Application.routes.draw do
 
   resources :images
   resources :tweets
+
+  match 'events/:event_id/get_tweets', to: 'events#get_tweets'
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
