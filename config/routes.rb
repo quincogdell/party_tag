@@ -1,8 +1,17 @@
 SecondProject::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  root to: "sessions#new"
+  root to: "users#show"
+
   resources :users
+  resources :events
+  resources :scrapbooks do
+    resources :pages
+  end
+
+  resources :images
+  resources :tweets
+
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
