@@ -8,14 +8,14 @@ class EventsController < ApplicationController
 
   def get_tweets
     #spit back tweets that match given event (in json)
-    
+
     #event = Event.find(params[:event_id])
     #serach_hash_tag = event.hash_tags.first.tag_name
 
     serach_hash_tag = "#partytagworkweek"
 
     results = Twitter.search("#partytagworkweek -rt", :count => 20).results
-    res_array = [] 
+    res_array = []
 
     results.each do |result|
       res_hash = {}
@@ -38,5 +38,17 @@ class EventsController < ApplicationController
       HashTag.create({tag_name: tag, event_id: event.id})
     end
     redirect_to "/"
+  end
+  def show
+    @event = Event.find(params[:id])
+  end
+  def edit
+    @event = Event.find(params[:id])
+  end
+  def update
+    @event = Event.find(params[:id])
+    @event.update_attributes(params[:event])
+    @event.save
+    redirect_to "/events/#{@event.id}"
   end
 end
