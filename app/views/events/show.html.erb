@@ -1,21 +1,29 @@
-<div class="event-items">
-  text
-</div>
-<div class="event-info">
-  <h1><%= @event.title %></h1><br>
-  At: <%= @event.location %><br>
-  On: <%= "#{@event.date}" %><br>
-  tracked tags:
-  <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %><br>
-  <%= link_to "edit", "/events/#{@event.id}/edit" %><br>
-</div>
-<div class="scrapbooks no-books">
-  <h2>Scrapbooks for this event</h2>
-  <% @event.scrapbooks.each do |book| %>
-    <%= link_to book.name, "/scrapbooks/#{book.id}" %>
-  <% end%>
-</div>
+<table>
+  <tr>
+    <td class="event-items">
+      <div >
+        text
+      </div>
+    </td>
+    <td class="no-books">
+    <div class="event-info">
+      <h1><%= @event.title %></h1><br>
+      At: <%= @event.location %><br>
+      On: <%= "#{@event.date}" %><br>
+      tracked tags:
+      <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %><br>
+      <%= link_to "edit", "/events/#{@event.id}/edit" %><br>
+    </div>
+    <div class="scrapbooks">
+      <h2>Scrapbooks for this event</h2>
+      <% @event.scrapbooks.each do |book| %>
+      <%= link_to book.name, "/scrapbooks/#{book.id}" %>
+      <% end%>
+    </div>
 
-<div class="canvas no-books">
-  text
-</div>
+    <div class="canvas">
+      text
+    </div>
+    </td>
+  </tr>
+</table>
