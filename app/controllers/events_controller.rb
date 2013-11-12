@@ -27,7 +27,7 @@ class EventsController < ApplicationController
     render :json => JSON.generate(res_array)
   end
   def index
-    @events = current_user.events
+    redirect_to "/"
   end
   def new
     @event = Event.new
@@ -44,6 +44,10 @@ class EventsController < ApplicationController
   end
   def show
     @event = Event.find(params[:id])
+    # @date = Date.strptime(
+    #   @event.date,
+    #   "%Y-%m-%d %H:%M:%S %Z"
+    #   ).strftime("%m/%d/%Y")
   end
   def edit
     @event = Event.find(params[:id])

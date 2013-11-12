@@ -1,3 +1,53 @@
+body {
+  font-family: Arial;
+
+}
 #container {
   width: 900px;
+}
+.nav {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #262626;
+  color: #D6D6D6;
+  font-size: 24px;
+}
+.nav h2 {
+  float: left;
+}
+.nav a {
+  color: #A2A2AB;
+}
+.nav ul {
+  background-color: #262626;
+  text-align: right;
+}
+.nav li {
+  text-align: right;
+  display: inline-block;
+  margin-right: 5%;
+  background-color: #262626;
+  font-size: 20px;
+}
+.event-info {
+  position: relative;
+  float: right;
+}
+.event-items {
+  background-color: #F08817;
+  float: left;
+  width: 60%;
+  height: 650px;
+  margin-top: -10px;
+  position: static;
+}
+.canvas{
+  position: ;
+  width: 30%;
+  text-align: right;
+  margin: 30px 1%;
+  height: 100px;
+  background-color: gray;
+  float: right;
 }

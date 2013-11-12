@@ -1,7 +1,11 @@
 <%= form_for @event  do |t| %>
   <%= t.label "Event Name" %>
-  <%= t.text_field "title" %>
+  <%= t.text_field "title"%><br>
+  <%= t.label "Event Location" %>
+  <%= t.text_field "location" %><br>
+  <%= t.label "Event Date" %>
+  <%= t.text_field "date", value: Date.today, type: "date" %><br>
   <%= label_tag "Hash tags to track, separated by commas" %>
-  <%= text_field_tag "tags" %>
+  <%= text_field_tag "tags" %><br>
   <%= t.submit %>
 <% end%>
