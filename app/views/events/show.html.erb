@@ -1,0 +1,4 @@
+<%= @event.title %><br>
+tracked tags:
+<%= @event.hash_tags.map {|hash| hash.tag_name}.join(", ") %>
+<%= link_to "edit", "/events/#{@event.id}/edit" %>

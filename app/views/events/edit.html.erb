@@ -1,0 +1,7 @@
+<%= form_for @event  do |t| %>
+  <%= t.label "Event Name" %>
+  <%= t.text_field "title", value: @event.title %>
+  <%= label_tag "Hash tags to track, separated by commas" %>
+  <%= text_field_tag "tags", @tags.map { |tag| tag.tag_name  }.join(", ") %>
+  <%= t.submit %>
+<% end%>
