@@ -1,7 +1,7 @@
 <div id="javascript-info" class="hidden" data-eventid=<%=@event.id%> data-hash-tags=<%= @event.hash_tags.first.tag_name %>>0</div>
-<h2>Event name goes here</h2>
-<h3>Event Name: <%= @event.title %></h3>
-<h3>Event Tags: <%= @event.hash_tags.first.tag_name %></h3>
+<h2 class='hidden'>Event name goes here</h2>
+<h3 class='hidden'>Event Name: <%= @event.title %></h3>
+<h3 class='hidden'>Event Tags: <%= @event.hash_tags.first.tag_name %></h3>
 
 <div id="tabs">
   <ul>
@@ -9,23 +9,21 @@
     <li><a href="#tabs-2">Tweet</a></li>
   </ul>
   <div id="tabs-1">
-    asdf
+    <img src="http://distilleryimage1.s3.amazonaws.com/7481d2b64b2311e3842c12103ab7ffe2_8.jpg">
+    <img src="http://distilleryimage4.s3.amazonaws.com/8ca2a9f64b2311e3a8e71286ad01131b_8.jpg">
+    <img src="http://distilleryimage11.s3.amazonaws.com/66ba52704b2311e3a6a50e2bdd882285_8.jpg">
+    <img src="http://distilleryimage9.s3.amazonaws.com/ab4e75dc4b0b11e3abff0e20f0e703f7_8.jpg">
   </div>
-  <div id="tabs-2">
-    asdf - tweet
-  </div>
-</div>
 
-<div id="tools-and-data">
-  <!-- all revelent pictures and tweets are listed --> 
-  <div id="instagram-pictures"> </div>
-  <div id="tweets"> </div>
-  &nbsp;
+  <div id="tabs-2">
+
+    <div class="tweet-container"><span class="tweet-text">what What WHAT TAWH tawH tahw #partytagworkweek</span><br/><span class="tweet-author">CooperMayne</span></div>
+    <div class="tweet-container"><span class="tweet-text">what? he let me write this! i could have written anything... #partytagworkweek</span><br/><span class="tweet-author">boygirlboigrrrl</span></div>
+    <div class="tweet-container"><span class="tweet-text">another big test #partytagworkweek</span><br/><span class="tweet-author">CooperMayne</span></div>
+    <div class="tweet-container"><span class="tweet-text">test #partytagworkweek</span><br/><span class="tweet-author">CooperMayne</span></div>
+
+  </div>
 </div>
 
 <div id="canvas">
-  <p>Date: <input type="text" id="datepicker" /></p>
-  
-  &nbsp;
-   <!-- where the magic happens! --> 
 </div>
