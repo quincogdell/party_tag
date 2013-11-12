@@ -2,9 +2,16 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+$(document).ready(function() {
+  Scrapbook.setEventListeners();
+  Scrapbook.queryTwitter();
+  Scrapbook.queryInstagram();
+  Scrapbook.eventId = $('#javascript-info').data('eventid');
+  Scrapbook.hashTags = $('#javascript-info').data('hash-tags');
+});
+
 var Scrapbook = {};
 var instaData, $instagram, response;
-
 
 Scrapbook.queryTwitter = function() {
   $.ajax({
@@ -26,14 +33,6 @@ Scrapbook.queryTwitter = function() {
     })
   });
 };
-
-$(document).ready(function() {
-  Scrapbook.setEventListeners();
-  Scrapbook.queryInstagram();
-  // Scrapbook.queryTwitter();
-  Scrapbook.eventId = $('#javascript-info').data('eventid');
-  Scrapbook.hashTags = $('#javascript-info').data('hash-tags');
-});
 
 
 Scrapbook.setEventListeners = function() {
