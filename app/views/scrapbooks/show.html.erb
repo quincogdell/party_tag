@@ -3,6 +3,29 @@
 <h3>Event Name: <%= @event.title %></h3>
 <h3>Event Tags: <%= @event.hash_tags.first.tag_name %></h3>
 
-<div id="instagram-pictures"> </div>
-<div id="tweets"> </div>
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Instagram</a></li>
+    <li><a href="#tabs-2">Tweet</a></li>
+  </ul>
+  <div id="tabs-1">
+    asdf
+  </div>
+  <div id="tabs-2">
+    asdf - tweet
+  </div>
+</div>
 
+<div id="tools-and-data">
+  <!-- all revelent pictures and tweets are listed --> 
+  <div id="instagram-pictures"> </div>
+  <div id="tweets"> </div>
+  &nbsp;
+</div>
+
+<div id="canvas">
+  <p>Date: <input type="text" id="datepicker" /></p>
+  
+  &nbsp;
+   <!-- where the magic happens! --> 
+</div>
