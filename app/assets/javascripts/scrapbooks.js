@@ -10,7 +10,8 @@ $(document).ready(function() {
   Scrapbook.setEventListeners();
   Scrapbook.queryInstagram();
   Scrapbook.queryTwitter();
-
+  Scrapbook.eventId = $('#javascript-info').data('eventid')
+  Scrapbook.hashTags = $('#javascript-info').data('hash-tags')
 });
 
 
