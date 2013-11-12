@@ -5,6 +5,26 @@
 var Scrapbook = {};
 
 
+Scrapbook.queryTwitter = function() {
+  $.ajax({
+    url: "/events/" + Scrapbook.eventId + "/get_tweets",
+    type: "GET",
+    dataType: "json"
+  }).done(function(tweets_array) {
+    $.each(tweets_array, function(index, tweet) {
+      var tweetEl = $('<div></div>').addClass('tweet-container')
+
+      var tweetText = $('<span></span>').addClass('tweet-text')
+      tweetText[0].textContent = tweet.text
+
+      var tweetAuthor = $('<span></span>').addClass('tweet-author')
+      tweetAuthor[0].textContent = tweet.author
+      tweetEl.append(tweetText)
+      tweetEl.append(tweetAuthor)
+      $('#tweets').append(tweetEl)
+    })
+  });
+};
 
 $(document).ready(function() {
   Scrapbook.setEventListeners();
