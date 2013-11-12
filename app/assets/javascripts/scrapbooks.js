@@ -3,7 +3,7 @@
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 var Scrapbook = {};
-var instaData, $instagram, data;
+var instaData, $instagram, response;
 
 
 
@@ -33,12 +33,13 @@ Scrapbook.queryInstagram = function() {
     url: queryString,
     dataType: "jsonp",
 
-  }).done(function(data){
+  }).done(function(response){
     //debugger
-    data = data.data;
+    var data = response.data;
     console.log(data);
     $.each(data, function(){
-      var img_url = this.link;
+
+      var img_url = this.images.standard_resolution.url;
 
       console.log(img_url);
       // $("<img />").attr("src", img_url);
