@@ -2,17 +2,17 @@
   <tr>
     <td class="event-items">
       <div >
-        text
+        this is where the instagram and twitter stuff will go
       </div>
     </td>
     <td class="no-books">
     <div class="event-info">
-      <h1><%= @event.title %></h1><br>
-      At: <%= @event.location %><br>
-      On: <%= "#{@event.date}" %><br>
-      tracked tags:
+      <h1><%= @event.title %></h1>
+      <strong>At:</strong> <%= @event.location %><br>
+      <strong>On:</strong> <%= "#{@event.date}" %><br>
+      <strong>tracked tags:</strong>
       <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %><br>
-      <%= link_to "edit", "/events/#{@event.id}/edit" %><br>
+      <%= link_to "edit", "/events/#{@event.id}/edit" %>
     </div>
     <div class="scrapbooks">
       <h2>Scrapbooks for this event</h2>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="canvas">
-      text
+      Drag an element here to begin a new page
     </div>
     </td>
   </tr>

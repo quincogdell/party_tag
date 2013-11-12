@@ -5,6 +5,7 @@ body {
 table {
   width: 100%;
 }
+
 #container {
 }
 .nav {
@@ -32,8 +33,10 @@ table {
   font-size: 20px;
 }
 .event-info {
+  margin: 15px;
 }
 .event-items {
+  padding: 2%;
   background-color: #F08817;
   width: 50%;
   height: 650px;
@@ -41,13 +44,17 @@ table {
 }
 .canvas{
   width: 70%;
-  text-align: right;
+  text-align: center;
   margin: 25px auto;
   height: 100px;
   background-color: gray;
+  padding: 2%
 }
 
 .no-books {
   text-align: center;
   width: 40%;
+}
+.no-books h1 {
+  font-size: 24px;
 }
