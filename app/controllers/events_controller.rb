@@ -26,6 +26,9 @@ class EventsController < ApplicationController
 
     render :json => JSON.generate(res_array)
   end
+  def index
+    @events = current_user.events
+  end
   def new
     @event = Event.new
   end

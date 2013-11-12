@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="nav">
+    <% if current_user %>
+    <%= current_user.name %>
+    <%= link_to "Create new event", "/events/new" %>
+    <%= link_to "My events", "/events" %>
+    <% else %>
+    <%= link_to "Log In", "/login" %>
+    <% end %>
+  </div>
 <div id="container">
 
 <%= yield %>
