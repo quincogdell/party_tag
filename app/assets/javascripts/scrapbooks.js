@@ -8,6 +8,12 @@ $(document).ready(function() {
   Scrapbook.queryInstagram();
   Scrapbook.eventId = $('#javascript-info').data('eventid');
   Scrapbook.hashTags = $('#javascript-info').data('hash-tags');
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
 });
 
 var Scrapbook = {};
@@ -29,14 +35,14 @@ Scrapbook.queryTwitter = function() {
       tweetAuthor[0].textContent = tweet.author
       tweetEl.append(tweetText)
       tweetEl.append(tweetAuthor)
-      $('#tweets').append(tweetEl)
+      $('#tabs-2').append(tweetEl)
     })
   });
 };
 
 
 Scrapbook.setEventListeners = function() {
-  $instagram = $("#instagram-pictures");
+  $instagram = $("#tabs-1");
 
 };
 

@@ -1,5 +1,26 @@
-// Place all the styles related to the scrapbooks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.hidden {
+  display: none;
+}
 
+#tabs, #canvas {
+  overflow: scroll;
+  float: left;
+  height: 500px;
+}
 
+#tabs {
+  width: 33%;
+  background-color: grey;
+}
+
+#tab-1 {}
+#tab-2 {}
+
+#canvas {
+  width:66%;
+  background-color: red;
+}
+
+img {
+  width: 90%;
+}
