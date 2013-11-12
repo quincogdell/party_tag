@@ -3,17 +3,12 @@
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready(function() {
+
   Scrapbook.setEventListeners();
-  Scrapbook.queryTwitter();
-  Scrapbook.queryInstagram();
+  //Scrapbook.queryTwitter();
+  //Scrapbook.queryInstagram();
   Scrapbook.eventId = $('#javascript-info').data('eventid');
   Scrapbook.hashTags = $('#javascript-info').data('hash-tags');
-  $(function() {
-    $( "#datepicker" ).datepicker();
-  });
-  $(function() {
-    $( "#tabs" ).tabs();
-  });
 });
 
 var Scrapbook = {};
@@ -83,3 +78,5 @@ Scrapbook.queryInstagram = function() {
 // Scrapbook.addInstaPics(data){
 //   console.log(data);
 // };
+//
+// JQUERY UI
