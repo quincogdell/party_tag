@@ -12,6 +12,7 @@ gem 'jquery-ui-rails'
 gem 'pg'
 gem "omniauth-facebook"
 gem "koala"
+gem "instagram"
 
 # Gems used only for assets and not required
 # in production environments by default.
