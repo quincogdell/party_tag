@@ -1,4 +1,13 @@
-
+<div class="nav second">
+  <h2><%= @event.title %></h2>
+  <ul>
+    <li><strong>At:</strong> <%= @event.location %></li>
+    <li><strong>On:</strong> <%= "#{@event.date}" %></li>
+    <li><strong>tracked tags:</strong>
+    <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %></li>
+    <li><%= link_to "edit", "/events/#{@event.id}/edit" %></li>
+  </ul>
+</div>
 <div class="event-items">
   <div id="tabs">
     <li><a href="#tabs-1">Instagram</a></li>
@@ -23,12 +32,6 @@
 </div>
 <div class="no-books">
   <div class="event-info">
-    <h1><%= @event.title %></h1>
-    <strong>At:</strong> <%= @event.location %><br>
-    <strong>On:</strong> <%= "#{@event.date}" %><br>
-    <strong>tracked tags:</strong>
-    <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %><br>
-    <%= link_to "edit", "/events/#{@event.id}/edit" %>
     <div class="scrapbooks">
       <h2>Scrapbooks for this event</h2>
       <% @event.scrapbooks.each do |book| %>
