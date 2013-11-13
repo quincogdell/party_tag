@@ -13,7 +13,7 @@ class EventsController < ApplicationController
 
     results = Twitter.search(search_hash_tag, :count => 20).results
     res_array = []
-    binding.pry
+
     results.each do |result|
       res_hash = {}
       res_hash[:text] = result.text
