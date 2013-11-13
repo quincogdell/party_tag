@@ -1,6 +1,5 @@
 
 .flatwhite#canvas {
-  width:66%;
   background-color: white;
   border: 3px solid black;
 }
@@ -10,7 +9,15 @@
   width: 200px;
   width: 200px;
 }
-
+.flatwhite.ui-wrapper {
+ border: 2px solid black;
+}
+.flatwhite.ui-wrapper img {
+ border: none;
+}
+img.flatwhite {
+ border: 2px solid black;
+}
 .flatwhite.tweet-container {
   background-color: white;
   border: none;
