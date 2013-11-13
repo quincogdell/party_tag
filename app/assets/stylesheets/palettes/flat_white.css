@@ -1,0 +1,19 @@
+
+.flatwhite#canvas {
+  width:66%;
+  background-color: white;
+  border: 3px solid black;
+}
+.flatwhite.img-container {
+  display: inline-block;
+  border: 2px solid black;
+  width: 200px;
+  width: 200px;
+}
+
+.flatwhite.tweet-container {
+  background-color: white;
+  border: none;
+  margin: 3px 0;
+  padding: 3px;
+}
