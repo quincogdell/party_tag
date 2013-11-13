@@ -3,7 +3,7 @@ $(document).ready(function() {
     $( "#tabs" ).tabs();
   });
 
-  $( "#tabs-1 img" ).draggable({
+  $( "#tabs-1 div" ).draggable({
     cancel: "a.ui-icon",
     revert: "invalid",
     helper: "clone",
@@ -16,30 +16,6 @@ $(document).ready(function() {
     cursor: "move"
   });
 
-  $( '#canvas' ).droppable({
-    accept: "#tabs-1 img, #tabs-2 .tweet-container",
-    drop: function( event, ui ) {
-      if (ui.draggable.hasClass('tweet-container')) {
-        var $droppedElement = ui.draggable.clone()
-          .css({"width":"250px"})
-          .resizable()
-          .draggable();
-      } else {
-        var $droppedElement = $( "<img></img>" )
-            .attr('src',ui.helper.attr('src'))
-            .css({"width":"200px", "height":"200px"})
-            .resizable({ aspectRatio: true })
-            .parent().draggable({
-              start: function() {
-                zIndex += 1;
-                $(this).css({"z-index":zIndex});
-              }
-            });
-      }
-      $(this).append($droppedElement);
-    }
-  });
-
   $( "#tabs-2 div").draggable({
     cancel: "a.ui-icon",
     revert: "invalid", 
@@ -49,8 +25,37 @@ $(document).ready(function() {
       return helper;
     },
     appendTo: "#canvas",
+    opacity: .8,
     cursor: "move"
   });
-})
 
+  $( '#canvas' ).droppable({
+    accept: "#tabs-1 .image-container, #tabs-2 .tweet-container",
+    drop: function( event, ui ) {
+      if (ui.draggable.hasClass('tweet-container')) {
+        var $droppedElement = ui.draggable.clone()
+          .css({"width":"250px"})
+          .resizable()
+          .draggable({
+            start: function() {
+              zIndex += 1;
+              $(this).css({"z-index":zIndex});
+            }
+          });
+      } else {
+        var $droppedElement = ui.draggable.clone()
+          .css({"width":"200px", "height":"200px"})
+          .resizable({ aspectRatio: true })
+          .draggable({
+            start: function() {
+              zIndex += 1;
+              $(this).css({"z-index":zIndex});
+            }
+          });
+      }
+      $(this).append($droppedElement);
+    }
+  });
+
+})
 var zIndex = 0;
