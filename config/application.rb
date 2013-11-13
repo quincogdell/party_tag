@@ -66,6 +66,6 @@ module SecondProject
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += ['scapbook.js', 'dynamic-canvas.js', 'pallet.js', 'events.js']
+    config.assets.precompile += ['scapbook.js', 'dynamic-canvas.js', 'pallet.js', 'events.js', 'html2canvas.js']
   end
 end
