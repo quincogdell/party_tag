@@ -23,7 +23,7 @@ class EventsController < ApplicationController
       res_hash[:author] = result.from_user
       res_array << res_hash
     end
-
+    binding.pry
     render :json => JSON.generate(res_array)
   end
   def index
