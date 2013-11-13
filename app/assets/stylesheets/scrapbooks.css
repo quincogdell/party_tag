@@ -3,12 +3,12 @@
 }
 
 #tabs, #canvas {
-  overflow: scroll;
   float: left;
   height: 500px;
 }
 
 #tabs {
+  overflow: scroll;
   width: 33%;
   background-color: grey;
 }
@@ -19,6 +19,8 @@
 #canvas {
   width:66%;
   background-color: red;
+  overflow: hidden;
+  position:relative;
 }
 
 .image-container img {

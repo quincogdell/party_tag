@@ -1,6 +1,9 @@
 SecondProject::Application.routes.draw do
   get "events/get_tweets"
 
+  #special route for image serving
+  get '/convert' => 'image#convert'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   root to: "users#show"
