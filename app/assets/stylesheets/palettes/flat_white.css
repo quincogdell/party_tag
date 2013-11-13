@@ -3,7 +3,7 @@
   background-color: white;
   border: 3px solid black;
 }
-.flatwhite.img-container {
+.flatwhite.image-container {
   display: inline-block;
   border: 2px solid black;
   width: 200px;
@@ -12,13 +12,14 @@
 .flatwhite.ui-wrapper {
  border: 2px solid black;
 }
-.flatwhite.ui-wrapper img {
+/*.flatwhite.ui-wrapper img {
  border: none;
 }
 img.flatwhite {
  border: 2px solid black;
-}
+}*/
 .flatwhite.tweet-container {
+  font-family: Serif;
   background-color: white;
   border: none;
   margin: 3px 0;

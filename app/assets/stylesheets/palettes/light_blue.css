@@ -1,0 +1,27 @@
+
+.lightblue#canvas {
+  background-color: #5DC7FF;
+  border: 3px solid black;
+}
+.lightblue.image-container {
+  display: inline-block;
+  border: 2px solid blue;
+  width: 200px;
+  width: 200px;
+}
+/*.lightblue.ui-wrapper {
+ border: 2px solid black;
+}*/
+/*.lightblue.ui-wrapper img {
+ border: none;
+}
+img.lightblue {
+ border: 2px solid black;
+}*/
+.lightblue.tweet-container {
+  font-family: sans-serif;
+  background-color: green;
+  border: none;
+  margin: 3px 0;
+  padding: 3px;
+}
