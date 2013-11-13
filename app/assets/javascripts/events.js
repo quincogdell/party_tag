@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
   Event.setEventListeners();
-  //Event.queryTwitter();
-  //Event.queryInstagram();
+  Event.queryInstagram();
+  // Event.queryTwitter();
   Event.eventId = $('#javascript-info').data('eventid');
   Event.hashTags = $('#javascript-info').data('hash-tags');
 });
 
 var Event = {};
-var instaData, $instagram, response;
+var $instagram, $tag, response;
 
 // Event.queryTwitter = function() {
 //   $.ajax({
@@ -34,52 +34,36 @@ var instaData, $instagram, response;
 
 Event.setEventListeners = function() {
   $instagram = $("#tabs-1");
+  $tag = $("#tags").text().trim();
 
 };
 
 Event.queryInstagram = function() {
-  var testTag = "PartyTagWorkWeek";
+
+  // var tag = $tag;
   var clientID = "client_id=7201ce9799fa4f4b9d5b4ece1d9f8251";
   var url = "https://api.instagram.com/v1/";
-  var queryItem = "/tags/" + testTag + "/media/recent?";
-  var queryString = url + queryItem + clientID; //+ "&callback=testCallBack";
+  var queryItem = "/tags/" + $tag + "/media/recent?";
+  var queryString = url + queryItem + clientID;
 
   $.ajax({
     type: 'get',
     url: queryString,
     dataType: "jsonp",
 
-  }).done(Event.addInstaPics(response));
-  // function(response){
-  //   var data = response.data;
-  //   console.log(data);
-  //   $.each(data, function(){
+  }).done(Event.addInstagramPics);
 
-  //     var img_url = this.images.standard_resolution.url;
-
-  //     console.log(img_url);
-  //     // $("<img />").attr("src", img_url);
-  //     $instagram.append($("<img/>").attr("src", img_url));
-  //   });
-
-  // });
 };
 
-Event.hitInstagram = function(response){
+Event.addInstagramPics = function(response){
   var data = response.data;
   console.log(data);
-
   $.each(data, function(){
-
       var img_url = this.images.standard_resolution.url;
-
       console.log(img_url);
       $instagram.append($("<img/>").attr("src", img_url));
     });
 };
 
-  Event.addInstaPics(data){
-  console.log(data);
-};
 
 
