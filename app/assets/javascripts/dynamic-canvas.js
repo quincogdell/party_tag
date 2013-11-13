@@ -7,7 +7,6 @@ $(document).ready(function() {
   $( "#tabs-1 div" ).draggable({
     cancel: "a.ui-icon",
     revert: "invalid",
-    cursor: "move"
     helper: "clone",
     helper: function() {
       var helper = $(this).clone()
@@ -15,6 +14,7 @@ $(document).ready(function() {
       return helper;
     },
     appendTo: "#canvas",
+    cursor: "move"
   });
 
   //twitter 
@@ -52,3 +52,26 @@ $(document).ready(function() {
 
 })
 var zIndex = 0;
+
+function saveCanvas () {
+  html2canvas(document.getElementById('canvas'), {
+    logging: true,
+    onrendered: function(canvas) {
+      var img = canvas.toDataURL("image/png");
+      img = img.replace("image/png","xx/xx");
+      downloadURL(img);
+    }
+  }); 
+}
+
+function downloadURL(url) {
+  var hiddenIFrameID = 'hiddenDownloader',
+      iframe = document.getElementById(hiddenIFrameID);
+  if (iframe === null) {
+    iframe = document.createElement('iframe');
+    iframe.id = hiddenIFrameID;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+  }
+  iframe.src = url;
+};
