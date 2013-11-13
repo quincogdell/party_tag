@@ -1,12 +1,5 @@
 body {
   font-family: Arial;
-
-}
-table {
-  width: 100%;
-}
-
-#container {
 }
 .nav {
   margin: 0px;
@@ -32,29 +25,66 @@ table {
   background-color: #262626;
   font-size: 20px;
 }
+
 .event-info {
+  text-align: center;
   margin: 15px;
 }
 .event-items {
+  float: left;
   padding: 2%;
+  margin: 0px;
   background-color: #F08817;
-  width: 50%;
-  height: 650px;
-  margin-top: -10px;
+  /*max-width: 50%;*/
+  max-width: 300px;
+  position: fixed;
+  overflow: scroll;
+  height: 85%;
 }
-.canvas{
-  width: 70%;
-  text-align: center;
-  margin: 25px auto;
-  height: 100px;
-  background-color: gray;
-  padding: 2%
-}
-
 .no-books {
+  float: right;
   text-align: center;
-  width: 40%;
+  width: 45%;
 }
 .no-books h1 {
   font-size: 24px;
+}
+
+.no-books div {
+  display: block;
+}
+
+.no-books #canvas {
+  width: 66%;
+  margin: 0px 15%;
+  height: 100px;
+  background-color: gray;
+  padding: 2%;
+}
+
+.books .event-info {
+  display: none;
+}
+#tabs {
+  width: 100%;
+  text-align: center;
+  background-color: #F08817;
+  border: none;
+}
+#tabs li {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 45%;
+  border-top: 1px solid black;
+  border-left: 5px solid black;
+  border-right: 1px solid black;
+  border-bottom: 5px solid black;
+  margin-bottom: 15px;
+  padding: 2% 1%;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
 }
