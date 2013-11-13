@@ -1,15 +1,22 @@
+<section class="usercentral">
 
+  <article class="userevents">
+    <h2>Your events:</h2>
+      <ul>
+      <% @events.each do |event| %>
+        <li><%= link_to event.title, "/events/#{event.id}" %></li>
+      <% end %>
+      </ul>
 
-<h2>Your events:</h2>
-<ul>
-<% @events.each do |event| %>
-<li><%= link_to event.title, "/events/#{event.id}" %></li>
-<% end %>
-</ul>
+  </article>
 
-<h2>Your Scrapbooks:</h2>
-<ul>
-<% @books.each do |book| %>
-<li><%= link_to "#{book.name}, from #{book.event}", "/scrapbooks/#{book.id}" %></li>
-<% end %>
-</ul>
+  <article class="userscrapbooks">
+    <h2>Your Scrapbooks:</h2>
+      <ul>
+      <% @books.each do |book| %>
+        <li><%= link_to "#{book.name}, from #{book.event}", "/scrapbooks/#{book.id}" %></li>
+      <% end %>
+      </ul>
+  </article>
+
+</section>
