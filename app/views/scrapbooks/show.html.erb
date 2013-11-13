@@ -9,15 +9,14 @@
     <li><strong>At:</strong> <%= @event.location %></li>
     <li><strong>On:</strong> <%= "#{@event.date}" %></li>
     <li><strong>tracked tags:</strong>
-    <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %></li>
-    <li><%= link_to "edit", "/events/#{@event.id}/edit" %></li>
-  </ul>
-</div>
-<div class="event-items">
-  <div id="tabs">
+      <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %></li>
+      <li><%= link_to "edit", "/events/#{@event.id}/edit" %></li>
+    </ul>
+  </div>
+  <div id="tabs" class="event-items">
     <ul>
-      <li><a href="#tabs-1">Instagram</a></li>
-      <li><a href="#tabs-2">Tweet</a></li>
+    <a href="#tabs-1"><li>Instagram</li></a>
+    <a href="#tabs-2"><li>Tweet</li></a>
     </ul>
     <div id="tabs-1">
 

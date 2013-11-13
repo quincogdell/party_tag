@@ -49,7 +49,7 @@ body {
   margin: 0px;
   background-color: #2980b9;
   max-width: 45%;
-  max-height: 560px;
+  height: 560px;
   overflow: scroll;
 }
 .no-books {
@@ -85,12 +85,15 @@ body {
   width: 100%;
   text-align: center;
   background-color: #2980b9;
+  background-image: none;
   border: none;
 }
-#tabs li {
+
+#tabs ul li {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  background-image: none;
   background-color: #3498db;
   width: 45%;
   border-top: 2px solid #2c3e50;
@@ -101,7 +104,11 @@ body {
   padding: 2% 1%;
   border-radius: 10px;
 }
-
+#tabs ul {
+  background-color: #2980b9;
+  background-image: none;
+  border: none;
+}
 a {
   text-decoration: none;
 }
