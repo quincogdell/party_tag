@@ -2,12 +2,14 @@ body {
   font-family: Arial;
 
 }
+table {
+  width: 100%;
+}
+
 #container {
-  width: 900px;
 }
 .nav {
   margin: 0px;
-  margin-bottom: 10px;
   padding: 15px;
   background-color: #262626;
   color: #D6D6D6;
@@ -31,23 +33,28 @@ body {
   font-size: 20px;
 }
 .event-info {
-  position: relative;
-  float: right;
+  margin: 15px;
 }
 .event-items {
+  padding: 2%;
   background-color: #F08817;
-  float: left;
-  width: 60%;
+  width: 50%;
   height: 650px;
   margin-top: -10px;
-  position: static;
 }
 .canvas{
-  position: ;
-  width: 30%;
-  text-align: right;
-  margin: 30px 1%;
+  width: 70%;
+  text-align: center;
+  margin: 25px auto;
   height: 100px;
   background-color: gray;
-  float: right;
+  padding: 2%
+}
+
+.no-books {
+  text-align: center;
+  width: 40%;
+}
+.no-books h1 {
+  font-size: 24px;
 }
