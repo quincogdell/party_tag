@@ -29,7 +29,12 @@ $(document).ready(function() {
             .attr('src',ui.helper.attr('src'))
             .css({"width":"200px", "height":"200px"})
             .resizable({ aspectRatio: true })
-            .parent().draggable();
+            .parent().draggable({
+              start: function() {
+                zIndex += 1;
+                $(this).css({"z-index":zIndex});
+              }
+            });
       }
       $(this).append($droppedElement);
     }
@@ -46,7 +51,6 @@ $(document).ready(function() {
     appendTo: "#canvas",
     cursor: "move"
   });
-
-  $( "#canvas img" ).resizable().parent().draggable();
 })
 
+var zIndex = 0;
