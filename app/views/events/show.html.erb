@@ -3,7 +3,7 @@
   <ul>
     <li><strong>At:</strong> <%= @event.location %></li>
     <li><strong>On:</strong> <%= "#{@event.date}" %></li>
-    <li><strong>tracked tags:</strong>
+    <li id="tags"><strong>tracked tags:</strong>
     <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %></li>
     <li><%= link_to "edit", "/events/#{@event.id}/edit" %></li>
   </ul>
