@@ -90,8 +90,21 @@ text-align: center;
   overflow: scroll;
   background-color: red;
 }
-#tabs {
+#buttons {
   text-align: center;
+  background-color: #2980b9;
+  background-image: none;
+  border: none;
+  border-radius: 0px;
+  padding: 0px;
+  display: inline-block;
+  float: left;
+  margin: 0px;
+  position: fixed;
+  overflow: scroll;
+  z-index: 100;
+}
+#tabs {
   background-color: #2980b9;
   background-image: none;
   border: none;
@@ -104,23 +117,29 @@ text-align: center;
   height: 600px;
   overflow: scroll;
   z-index: 100;
+  border: none;
 }
-#tabs ul li {
+#tabs-div {
+  padding-top: 20px;
+}
+#buttons ul li {
   text-decoration: none;
   display: inline-block;
   text-align: center;
   background-image: none;
   background-color: #3498db;
   width: 28%;
-  border-top: 2px solid #2c3e50;
-  border-left: 5px solid #2c3e50;
-  border-right: 2px solid #2c3e50;
-  border-bottom: 5px solid #2c3e50;
+  border-top: 1px solid #2c3e50;
+  border-left: 3px solid #2c3e50;
+  border-right: 1px solid #2c3e50;
+  border-bottom: 3px solid #2c3e50;
   margin-bottom: 10px;
+  margin-top: 10px;
   padding: 1%;
   border-radius: 10px;
 }
-#tabs ul {
+#buttons ul {
+  margin-top: 10px;
   margin-left: 3%;
   background-color: #2980b9;
   background-image: none;

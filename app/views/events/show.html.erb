@@ -1,8 +1,8 @@
 <div class="nav second" id="second">
   <div id="javascript-info" class="hidden"
-    data-userid=<%= @current_user_id %>
-    data-eventid=<%=@event.id%>
-    data-hash-tags=<%= @event.hash_tag %>></div>
+  data-userid=<%= @current_user_id %>
+  data-eventid=<%=@event.id%>
+  data-hash-tags=<%= @event.hash_tag %>></div>
   <h2><%= @event.title %></h2>
   <ul>
     <li>
@@ -23,33 +23,36 @@
   </ul>
 </div>
 <div id="nav-case"></div>
-<div id="container" class = "no-books">
-  <div id="tabs" class="no-books">
-    <ul>
-      <div id="button-div" class="hidden">
-      <%= text_field_tag "scrap-name", nil, placeholder: "Name this collage"%>
-      <%= submit_tag "save", id: "save-button" %>
+<div id="container">
+  <div id="tabs">
+    <div id="buttons">
+      <ul>
+        <div id="button-div">
+          <%= text_field_tag "scrap-name", nil, placeholder: "Name this collage"%>
+          <%= submit_tag "save", id: "save-button" %>
+        </div>
+        <li><a href="#tabs-1">Instagrams</a></li>
+        <li><a href="#tabs-2">Tweets</a></li>
+        <li><a href="#tabs-3">Palettes</a></li>
+      </ul>
     </div>
-      <li><a href="#tabs-1">Instagrams</a></li>
-      <li><a href="#tabs-2">Tweets</a></li>
-      <li><a href="#tabs-3">Palettes</a></li>
-    </ul>
+    <div id="tab-clear"></div>
+    <div id="tabs-div">
+      <div id="tabs-1">
+      </div>
+      <div id="tabs-2">
+      </div>
+      <div id="tabs-3">
+        <div class="flatwhite palette" id="flatwhite">Flat White</div>
+        <div id="lightblue" class="lightblue palette">Light Blue</div>
+        <div class="palette">Original</div>
+      </div>
+    </div>
   </div>
-  <div id="view">
-    <div id="tabs-1">
-    </div>
-    <div id="tabs-2">
-    </div>
-    <div id="tabs-3">
-      <div class="flatwhite palette" id="flatwhite">Flat White</div>
-      <div id="lightblue" class="lightblue palette">Light Blue</div>
-      <div class="palette">Original</div>
-    </div>
-  </div>
-  <div class="no-books">
+  <div>
     <div class="scrapbooks">
       <h2>Scrapbooks for this event</h2>
-        <li><%= link_to "first scrap book", "/scrapbooks/1" %></li>
+      <li><%= link_to "first scrap book", "/scrapbooks/1" %></li>
       <% @event.scrapbooks.each do |book| %>
       <li><%= link_to book.name, "/scrapbooks/#{book.id}" %></li>
       <% end%>
