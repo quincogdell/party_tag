@@ -53,35 +53,34 @@ body {
   text-align: center;
   margin: 15px;
 }
-.event-items {
-
-}
-.no-books {
-  float: right;
-  text-align: center;
-  width: 600px;
-  overflow: scroll;
-  /*position: relative;*/
+.no-books#tabs {
+  max-width: 40%;
+  float: left;
 }
 .no-books h1 {
   font-size: 24px;
 }
 .no-books div {
   display: block;
+  text-align: center;
+}
+.scrapbooks {
+display: none;
+margin: 15px;
 }
 .no-books #canvas {
   width: 400px;
-  margin: 0px 15%;
   height: 100px;
   background-color: #bdc3c7;
   padding: 2%;
+  margin-right: 10%;
+}
+.no-books#container {
+  background-color: white;
 }
 .book {
   width: 600px;
   overflow: scroll;
-}
-.event-info {
-  display: none;
 }
 #container{
   clear: top;

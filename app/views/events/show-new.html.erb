@@ -19,9 +19,8 @@
     </li>
   </ul>
 </div>
-<div id="nav-case"></div>
-<div id="container" class = "no-books">
-  <div id="tabs" class="no-books">
+<div id="container">
+  <div id="tabs" class="event-items">
     <ul>
       <li><a href="#tabs-1">Instagram</a></li>
       <li><a href="#tabs-2">Tweet</a></li>
@@ -43,12 +42,11 @@
   <div class="no-books">
     <div class="scrapbooks">
       <h2>Scrapbooks for this event</h2>
-        <li><%= link_to "first scrap book", "/scrapbooks/1" %></li>
       <% @event.scrapbooks.each do |book| %>
-      <li><%= link_to book.name, "/scrapbooks/#{book.id}" %></li>
+      <%= link_to book.name, "/scrapbooks/#{book.id}" %>
       <% end%>
     </div>
-    <div id="canvas"> drag here to create a new scrap book</div>
+    <div id="canvas"> </div>
   </div>
-  <%= javascript "events.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
+  <%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
 </div>
