@@ -1,19 +1,28 @@
 .instagram {
   border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 15px;
   font-size: 75%;
+  border-image-slice: 15 15 15 15;
+  border-image-width: 10px;
+  border-image-outset: 4px;
+  border-image-repeat: round round;
+  border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png");
 }
 
-.insta-image {
-  width: 80%;
-
+.insta-image img {
+  width: 100%;
+  height: auto;
 }
 
 .instaUser {
   color: red;
+  font-size: 75%;
 }
 
 .instaText {
   color: white;
+  font-size: 75%;
 }
 
 #notice {
