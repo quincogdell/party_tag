@@ -1,6 +1,7 @@
 .preview {
   width: 150px;
   height: 101px;
+  display: inline-block;
 }
 
 .new-scrapbook {
