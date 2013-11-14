@@ -15,3 +15,11 @@
 .instaText {
   color: white;
 }
+
+#notice {
+  color: red;
+}
+
+.event-form {
+  text-align: center;
+}
