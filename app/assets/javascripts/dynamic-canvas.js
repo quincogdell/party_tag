@@ -20,10 +20,10 @@ Canvas.draggableInstagrams = function() {
 Canvas.draggableTweets = function() {
   $( "#tabs-2 .tweet-container").draggable({
     cancel: "a.ui-icon",
-    revert: "invalid", 
+    revert: "invalid",
     helper: "clone",
     helper: function() {
-      var helper = $(this).clone(); 
+      var helper = $(this).clone();
       return helper;
     },
     appendTo: "#canvas",
@@ -62,7 +62,7 @@ Canvas.saveCanvas = function () {
       img = img.replace("image/png","xx/xx");
       downloadURL(img);
     }
-  }); 
+  });
 }
 
 function downloadURL(url) {
