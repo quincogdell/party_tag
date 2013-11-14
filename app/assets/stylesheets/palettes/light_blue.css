@@ -1,7 +1,6 @@
 
 .lightblue#canvas {
   background-color: #5DC7FF;
-  border: 3px solid black;
 }
 .lightblue.image-container {
   display: inline-block;
@@ -24,4 +23,8 @@ img.lightblue {
   border: none;
   margin: 3px 0;
   padding: 3px;
+}
+.palette.lightblue {
+  background-color: #5DC7FF;
+  border: 2px solid blue;
 }

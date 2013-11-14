@@ -1,9 +1,13 @@
+$(document).ready(function() {
+  $(".palette").on("click", changePalette)
+});
 var palette = {
   label: null
 };
 
-var changePalette = function(label) {
-  $("." + palette.label).removeClass(palette.label)
+var changePalette = function(e) {
+  var label = $(this).attr("id")
+  $("." + palette.label).not($(".palette")).removeClass(palette.label)
   $(".image-container").addClass(label);
   $(".tweet-container").addClass(label);
   $("#canvas").addClass(label);

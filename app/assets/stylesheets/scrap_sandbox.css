@@ -14,7 +14,7 @@
 #tabs-1 {
   background-color: #2980b9;
 }
-.no-books #tabs-3 {
+.no-books#tabs-3 {
   display: none;
 }
 .no-books ul:nth-child(3) {
