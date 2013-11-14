@@ -2,6 +2,7 @@ class ScrapbooksController < ApplicationController
   respond_to :json, :html
   def show
     @scrapbook = Scrapbook.find(params[:id])
+    @canvas_content = @scrapbook.html
     @event = @scrapbook.event
     respond_with @scrapbook
   end

@@ -44,6 +44,8 @@
     </div>
 
   </div>
-  <div id="canvas"> </div>
+  <div id="canvas"> 
+    <%= @canvas_content.html_safe %>
+  </div>
   <%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
 </div>
