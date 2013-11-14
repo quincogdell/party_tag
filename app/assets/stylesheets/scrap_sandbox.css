@@ -25,7 +25,8 @@
   background-color: red;
   height: 600px;
   float: right;
-  border: 3px solid black;
+  border: 5px solid black;
+  margin: 1px;
 }
 
 img {

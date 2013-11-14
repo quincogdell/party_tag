@@ -43,7 +43,6 @@ class EventsController < ApplicationController
   end
   def edit
     @event = Event.find(params[:id])
-    @tags = @event.hash_tags
   end
   def update
     @event = Event.find(params[:id])

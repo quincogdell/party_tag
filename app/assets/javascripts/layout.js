@@ -14,7 +14,7 @@ var setSize = function () {
   $("#tabs").css("height", height);
   var width = $("#container").width();
   width -= $("#canvas").width();
-  width -= 6;
+  width -= 12;
   $("#tabs").css("width", width);
   $("#tabs-1").width;
   var size = $("#tabs ul li").width()
