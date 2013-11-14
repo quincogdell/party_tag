@@ -32,7 +32,7 @@ Event.queryTwitter = function() {
 
 Event.setEventListeners = function() {
   $instagram = $("#tabs-1");
-  $tag = $("#tags").text().trim();
+  // $tag = $("#data-hash-tags").text().trim();
   Event.eventId = $('#javascript-info').data('eventid');
   Event.hashTags = $('#javascript-info').data('hash-tags');
 
@@ -41,26 +41,29 @@ Event.setEventListeners = function() {
 Event.queryInstagram = function() {
   var clientID = "client_id=7201ce9799fa4f4b9d5b4ece1d9f8251";
   var url = "https://api.instagram.com/v1/";
-  var queryItem = "/tags/" + $tag + "/media/recent?";
+  var queryItem = "/tags/" + Event.hashTags + "/media/recent?";
   var queryString = url + queryItem + clientID;
 
   $.ajax({
     type: 'get',
     url: queryString,
     dataType: "jsonp",
-  }).done(Event.addInstagramPics);
+  }).done(function(response){
+    Event.addInstagramPics(response);
+    Canvas.dragableInstagram();
+    Canvas.dragableTweets();
+  });
 };
 
 Event.addInstagramPics = function(response){
   var data = response.data;
-  console.log(data);
-
 
   $.each(data, function(){
-      var $instagramElement = $("<div />");
-      var $instagramImage = $("<div />");
-      var $commentsElement = $("<div />");
+      var $instagramElement = $("<div />").addClass("instagram");
+      var $instagramImage = $("<div />").addClass("insta-image");
+      var $instagramExtras = $("<div />").addClass("insta-extras");
       var commentsCount = this.comments.count;
+
 
       var img_url = this.images.standard_resolution.url;
       $instagramImage.append($("<img/>").attr("src", img_url));
@@ -68,12 +71,14 @@ Event.addInstagramPics = function(response){
       $instagramElement.append($instagramImage);
 
       if (commentsCount !== 0) {
+
         var commentsText = this.comments.data[0].text;
         var $commentsBody = $("<p />").text(commentsText);
 
-        $commentsElement.append($commentsBody);
-        $instagramElement.append($commentsElement);
-        debugger
+        $instagramExtras.append($commentsBody);
+
+        $instagramElement.append($instagramExtras);
+
       }
 
 
