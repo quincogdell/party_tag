@@ -40,6 +40,7 @@ class EventsController < ApplicationController
   end
   def show
     @event = Event.find(params[:id])
+    @current_user = current_user
     # @date = Date.strptime(
     #   @event.date,
     #   "%Y-%m-%d %H:%M:%S %Z"
