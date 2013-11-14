@@ -81,12 +81,13 @@ Canvas.downloadURL= function(url) {
   iframe.src = url;
 };
 
-Canvas.save = function() {
-  var canvasHtml = $('#canvas').html();
+Canvas.save = function(name) {
+  var canvasHtml = $('#canvas-container').html();
   $.ajax({
     url: "/scrapbooks",
     type: "POST",
     data: {
+      name: name,
       user_id: Event.userId,
       event_id: Event.eventId,
       html : canvasHtml

@@ -1,9 +1,11 @@
 $(document).ready(function() {
-  $(".palette").on("click", changePalette)
+  $(".palette").on("click", changePalette);
+  $("#save-button").on("click", saveButton);
+  var palette = {
+    label: null
+  };
 });
-var palette = {
-  label: null
-};
+
 
 var changePalette = function(e) {
   var label = $(this).attr("id")
@@ -16,4 +18,10 @@ var changePalette = function(e) {
   palette.label = label;
 }
 
-
+var saveButton = function(e) {
+  e.preventDefault();
+  var name = $("#scrap-name").val();
+  Canvas.save(name);
+  $("#saved").fadeIn(fast);
+  $("#saved").fadeOut(slow);
+}
