@@ -11,3 +11,9 @@ var changePalette = function(label) {
   $("#container").css("background-color", color);
   palette.label = label;
 }
+
+var changeOver = function(e) {
+  $(".no-books").removeClass(".no-books");
+}
+
+$("#canvas").on("mouseover", changeOver);

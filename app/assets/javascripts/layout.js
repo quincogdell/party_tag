@@ -8,6 +8,10 @@ var setSize = function () {
   clear += $("#second").height();
   clear += 20;
   $("#nav-case").css("height", clear);
+  height = $(window).height() - clear;
+  // if (height > $("#container").css("min-height")) {
+    $("#container").css("height", height);
+  // };
   var width = $("#container").width();
   width -= $("#canvas").width();
   width -= 6;
