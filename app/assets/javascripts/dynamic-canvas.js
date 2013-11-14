@@ -1,23 +1,23 @@
-$(document).ready(function() {
-  $(function() {
-    $( "#tabs" ).tabs();
-  });
+var Canvas = {};
 
-  //instagram 
+Canvas.zIndex = 0;
+
+Canvas.draggableInstagrams = function() {
   $( "#tabs-1 div" ).draggable({
     cancel: "a.ui-icon",
     revert: "invalid",
     helper: "clone",
     helper: function() {
       var helper = $(this).clone()
-            .css({ "width":"250px", "height": "250px" });
-      return helper;
+    .css({ "width":"250px", "height": "250px" });
+  return helper;
     },
     appendTo: "#canvas",
     cursor: "move"
   });
+};
 
-  //twitter 
+Canvas.draggableTweets = function() {
   $( "#tabs-2 div").draggable({
     cancel: "a.ui-icon",
     revert: "invalid", 
@@ -29,31 +29,32 @@ $(document).ready(function() {
     appendTo: "#canvas",
     cursor: "move"
   });
+};
 
+Canvas.droppableCanvas = function() {
   $( '#canvas' ).droppable({
     accept: "#tabs-1 .image-container, #tabs-2 .tweet-container",
     drop: function( event, ui ) {
       if (ui.draggable.hasClass('tweet-container')) {
         var $droppedElement = ui.helper.clone()
-          .resizable();
+    .resizable();
       } else {
         var $droppedElement = ui.helper.clone()
-          .resizable({ aspectRatio: true });
+    .resizable({ aspectRatio: true });
       }
       $droppedElement.draggable({
         start: function() {
-          zIndex += 1;
-          $(this).css({"z-index":zIndex});
+          Canvas.zIndex += 1;
+          $(this).css({"z-index":Canvas.zIndex});
         }
       });
       $(this).append($droppedElement);
     }
   });
+};
 
-})
-var zIndex = 0;
 
-function saveCanvas () {
+Canvas.saveCanvas = function () {
   html2canvas(document.getElementById('canvas'), {
     logging: true,
     onrendered: function(canvas) {
@@ -75,3 +76,14 @@ function downloadURL(url) {
   }
   iframe.src = url;
 };
+
+$(document).ready(function() {
+  Canvas.draggableInstagrams();
+  Canvas.draggableTweets();
+  Canvas.droppableCanvas();
+
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+
+})
