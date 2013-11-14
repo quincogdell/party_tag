@@ -3,7 +3,7 @@ var Canvas = {};
 Canvas.zIndex = 0;
 
 Canvas.draggableInstagrams = function() {
-  $( "#tabs-1 div" ).draggable({
+  $( "#tabs-1 .instagram" ).draggable({
     cancel: "a.ui-icon",
     revert: "invalid",
     helper: "clone",
@@ -18,7 +18,7 @@ Canvas.draggableInstagrams = function() {
 };
 
 Canvas.draggableTweets = function() {
-  $( "#tabs-2 div").draggable({
+  $( "#tabs-2 .tweet-container").draggable({
     cancel: "a.ui-icon",
     revert: "invalid",
     helper: "clone",
@@ -33,7 +33,7 @@ Canvas.draggableTweets = function() {
 
 Canvas.droppableCanvas = function() {
   $( '#canvas' ).droppable({
-    accept: "#tabs-1 .image-container, #tabs-2 .tweet-container",
+    accept: "#tabs-1 .instagram, #tabs-2 .tweet-container",
     drop: function( event, ui ) {
       if (ui.draggable.hasClass('tweet-container')) {
         var $droppedElement = ui.helper.clone()
