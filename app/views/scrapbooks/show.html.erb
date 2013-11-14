@@ -1,48 +1,46 @@
-
 <div id="javascript-info" class="hidden" data-eventid=<%=@event.id%> data-hash-tags=<%= @event.hash_tags.first.tag_name %>>0</div>
-<h2 class='hidden'>Event name goes here</h2>
-<h3 class='hidden'>Event Name: <%= @event.title %></h3>
-<h3 class='hidden'>Event Tags: <%= @event.hash_tags.first.tag_name %></h3>
-<div class="nav second">
+<div class="nav-case">
+<div class="nav second" id="second">
   <h2><%= @event.title %></h2>
   <ul>
-    <li><strong>At:</strong> <%= @event.location %></li>
-    <li><strong>On:</strong> <%= "#{@event.date}" %></li>
-    <li><strong>tracked tags:</strong>
-      <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %></li>
-      <li><%= link_to "edit", "/events/#{@event.id}/edit" %></li>
-    </ul>
-  </div>
+    <li>
+    <strong>At:</strong>
+    <%= @event.location %>
+    </li>
+    <li>
+    <strong>On:</strong>
+    <%= "#{@event.date}" %>
+    </li>
+    <li>
+    <strong>tracked tags:</strong>
+    <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %>
+    </li>
+    <li>
+    <%= link_to "edit", "/events/#{@event.id}/edit" %>
+    </li>
+  </ul>
+</div>
+</div>
+<div id="container">
   <div id="tabs" class="event-items">
     <ul>
-    <a href="#tabs-1"><li>Instagram</li></a>
-    <a href="#tabs-2"><li>Tweet</li></a>
+      <li><a href="#tabs-1">Instagram</a></li>
+      <li><a href="#tabs-2">Tweet</a></li>
     </ul>
     <div id="tabs-1">
-
-
-      <div class="instagram" id="00000001">
-        <div class="insta image">
-          <img src="http://distilleryimage1.s3.amazonaws.com/7481d2b64b2311e3842c12103ab7ffe2_8.jpg">
-        </div>
-        <div class="insta text">
-          <p>comments go here</p>
-        </div>
-      </div>
-
-      <div class="image-container"><img src="http://distilleryimage4.s3.amazonaws.com/8ca2a9f64b2311e3a8e71286ad01131b_8.jpg"></div>
-      <div class="image-container"><img src="http://distilleryimage11.s3.amazonaws.com/66ba52704b2311e3a6a50e2bdd882285_8.jpg"></div>
-      <div class="image-container"><img src="http://distilleryimage9.s3.amazonaws.com/ab4e75dc4b0b11e3abff0e20f0e703f7_8.jpg"></div>
+      <div class="image-container"><img src="/convert/?image_url=http://distilleryimage1.s3.amazonaws.com/7481d2b64b2311e3842c12103ab7ffe2_8.jpg"></div>
+      <div class="image-container"><img src="/convert/?image_url=http://distilleryimage4.s3.amazonaws.com/8ca2a9f64b2311e3a8e71286ad01131b_8.jpg"></div>
+      <div class="image-container"><img src="/convert/?image_url=http://distilleryimage11.s3.amazonaws.com/66ba52704b2311e3a6a50e2bdd882285_8.jpg"></div>
+      <div class="image-container"><img src="/convert/?image_url=http://distilleryimage9.s3.amazonaws.com/ab4e75dc4b0b11e3abff0e20f0e703f7_8.jpg"></div>
     </div>
-
     <div id="tabs-2">
-      <div class="tweet-container"><span class="tweet-text">what What WHAT TAWH tawH tahw #partytagworkweek</span><br/><span class="tweet-author">CooperMayne</span></div>
-      <div class="tweet-container"><span class="tweet-text">what? he let me write this! i could have written anything... #partytagworkweek</span><br/><span class="tweet-author">boygirlboigrrrl</span></div>
-      <div class="tweet-container"><span class="tweet-text">another big test #partytagworkweek</span><br/><span class="tweet-author">CooperMayne</span></div>
-      <div class="tweet-container"><span class="tweet-text">test #partytagworkweek</span><br/><span class="tweet-author">CooperMayne</span></div>
-
+      <div class="tweet-container"><span class="tweet-text">what What WHAT TAWH tawH tahw #partytagworkweek</span><span class="tweet-author">CooperMayne</span></div>
+      <div class="tweet-container"><span class="tweet-text">what? he let me write this! i could have written anything... #partytagworkweek</span><span class="tweet-author">boygirlboigrrrl</span></div>
+      <div class="tweet-container"><span class="tweet-text">another big test #partytagworkweek</span><span class="tweet-author">CooperMayne</span></div>
+      <div class="tweet-container"><span class="tweet-text">test #partytagworkweek</span><span class="tweet-author">CooperMayne</span></div>
     </div>
+
   </div>
-</div>
-<div id="canvas">
+  <div id="canvas"> </div>
+    <%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
 </div>

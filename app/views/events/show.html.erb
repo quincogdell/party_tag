@@ -3,8 +3,8 @@
   <ul>
     <li><strong>At:</strong> <%= @event.location %></li>
     <li><strong>On:</strong> <%= "#{@event.date}" %></li>
-    <li id="tags"><strong>tracked tags:</strong>
-    <%= @event.hash_tags.map  { |hash| "##{hash.tag_name}"}.join(", ") %></li>
+    <li><strong>tracked tags:</strong>
+    <span id="tags"><%= @event.hash_tags.map  { |hash| "#{hash.tag_name}"}.join(", ") %></span></li>
     <li><%= link_to "edit", "/events/#{@event.id}/edit" %></li>
   </ul>
 </div>
@@ -15,10 +15,8 @@
     <a href="#tabs-2"><li>Tweet</li></a>
     </ul>
     <div id="tabs-1">
-      <div class="image-container"><img src="http://distilleryimage1.s3.amazonaws.com/7481d2b64b2311e3842c12103ab7ffe2_8.jpg"></div>
-      <div class="image-container"><img src="http://distilleryimage4.s3.amazonaws.com/8ca2a9f64b2311e3a8e71286ad01131b_8.jpg"></div>
-      <div class="image-container"><img src="http://distilleryimage11.s3.amazonaws.com/66ba52704b2311e3a6a50e2bdd882285_8.jpg"></div>
-      <div class="image-container"><img src="http://distilleryimage9.s3.amazonaws.com/ab4e75dc4b0b11e3abff0e20f0e703f7_8.jpg"></div>
+
+
     </div>
 
     <div id="tabs-2">
@@ -44,5 +42,6 @@
   <div id="canvas">
     Drag an element here to begin a new page
   </div>
+  <%= javascript "events.js" %>
 </div>
 
