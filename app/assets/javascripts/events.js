@@ -71,7 +71,7 @@ Event.addInstagramPics = function(response){
       $instagramElement.append($instagramImage);
 
       if (commentsCount !== 0) {
-
+        debugger
         var commentsText = this.comments.data[0].text;
         var $commentsBody = $("<p />").text(commentsText);
 
@@ -80,11 +80,7 @@ Event.addInstagramPics = function(response){
         $instagramElement.append($instagramExtras);
 
       }
-
-
-
       $instagram.append($instagramElement);
-      // $instagram.append($("<img/>").attr("src", img_url));
     });
 };
 
