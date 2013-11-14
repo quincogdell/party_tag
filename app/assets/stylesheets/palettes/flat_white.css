@@ -1,7 +1,7 @@
 
 .flatwhite#canvas {
   background-color: white;
-  border: 3px solid black;
+  border: 5px solid black;
 }
 .flatwhite.insta-image {
   display: inline-block;
@@ -18,4 +18,8 @@
   border: none;
   margin: 3px 0;
   padding: 3px;
+}
+.palette.flatwhite {
+  background-color: white;
+  border: 2px solid black;
 }

@@ -111,7 +111,7 @@ text-align: center;
   text-align: center;
   background-image: none;
   background-color: #3498db;
-  width: 42%;
+  width: 28%;
   border-top: 2px solid #2c3e50;
   border-left: 5px solid #2c3e50;
   border-right: 2px solid #2c3e50;
@@ -129,4 +129,8 @@ text-align: center;
 }
 a {
   text-decoration: none;
+}
+div.palette {
+  margin: 10px;
+  background-color: red;
 }
