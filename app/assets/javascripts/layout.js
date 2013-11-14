@@ -26,6 +26,7 @@ var changeOver = function() {
   if ($("#container").hasClass("no-books")) {
     $(".no-books").removeClass("no-books");
     $("#canvas").empty();
+    $("#button-div").removeClass("hidden");
     setSize();
   }
 }
