@@ -6,14 +6,12 @@ class InstasController < ApplicationController
   end
 
   def create
-    binding.pry
   end
 
   def new
   end
 
   def show
-    binding.pry
   end
 
   def update

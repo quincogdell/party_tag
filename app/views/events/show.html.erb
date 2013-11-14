@@ -1,6 +1,6 @@
 <div class="nav second" id="second">
   <div id="javascript-info" class="hidden"
-    data-userid=4
+    data-userid=<%= @current_user_id %>
     data-eventid=<%=@event.id%>
     data-hash-tags=<%= @event.hash_tag %>></div>
   <h2><%= @event.title %></h2>
