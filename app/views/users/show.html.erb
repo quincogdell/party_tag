@@ -1,21 +1,22 @@
 <div id="nav-case"></div>
 
-  <div class="userevents">
-      <% @events.each do |event| %>
-        <h3><%= link_to event.title, "/events/#{event.id}" %></h3>
-        <% event.scrapbooks.each do |scrapbook| %>
-          <a href=<%= "/scrapbooks/#{scrapbook.id}" %>>
-          <img class='preview' src=<%= scrapbook.canvas %>>
-        </a>
-        <% end %>
-
-        <div class="new-scrapbook">
-          <a href= <%= "/events/#{event.id}" %>>
-            <img class="add-image" src="additition_sign.png">
-          </a>
-        </div>
-
-    <% end %>
+<div class="userevents">
+  <h1 id='events-header'>EVENTS</h1>
+  <% @events.each do |event| %>
+    <div class='event-container'>
+    <h2 class="title-header"><%= event.title %></h2>
+    <% event.scrapbooks.each do |scrapbook| %>
+      <a href=<%= "/scrapbooks/#{scrapbook.id}" %>>
+      <img class='preview' src=<%= scrapbook.canvas %>>
+    </a>
+  <% end %>
+    <div class="new-scrapbook">
+      <a href= <%= "/events/#{event.id}" %>>
+        <img class="add-image" src="additition_sign.png">
+      </a>
+    </div>
   </div>
+<% end %>
+</div>
 
 
