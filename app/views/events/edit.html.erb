@@ -10,3 +10,4 @@
   <%= text_field_tag "tags", @tags.map { |tag| tag.tag_name  }.join(", ") %><br>
   <%= t.submit %>
 <% end%>
+  <%= button_to "Delete Event", @event, :method => :delete %>

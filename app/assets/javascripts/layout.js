@@ -9,10 +9,9 @@ var setSize = function () {
   clear += $("#second").height();
   clear += 20;
   $("#nav-case").css("height", clear);
+  $("tabs").css("margin-top", clear);
   height = $(window).height() - clear;
-  // if (height > $("#container").css("min-height")) {
-    $("#container").css("height", height);
-  // };
+  $("#tabs").css("height", height);
   var width = $("#container").width();
   width -= $("#canvas").width();
   width -= 6;
@@ -25,9 +24,9 @@ var setSize = function () {
 }
 var changeOver = function() {
   if ($("#container").hasClass("no-books")) {
-  $(".no-books").removeClass("no-books");
-  $("#canvas").empty();
-  setSize();
-}
+    $(".no-books").removeClass("no-books");
+    $("#canvas").empty();
+    setSize();
+  }
 }
 
