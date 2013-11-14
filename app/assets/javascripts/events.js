@@ -71,7 +71,7 @@ Event.addInstagramPics = function(response){
       // other meta data from the instagram json
       var numComments = this.comments.count;
       var instaId = this.id;
-      var img_url = this.images.standard_resolution.url;
+      var img_url = "/convert/?image_url=" + this.images.standard_resolution.url;
 
       // add image and append to instagramElement
       $instagramImage.append($("<img/>").attr("src", img_url));
