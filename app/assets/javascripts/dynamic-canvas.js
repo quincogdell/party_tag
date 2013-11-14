@@ -23,7 +23,8 @@ Canvas.draggableTweets = function() {
     revert: "invalid",
     helper: "clone",
     helper: function() {
-      var helper = $(this).clone();
+      var helper = $(this).clone()
+    .css({ "width":"200px", "height": "150px" });
       return helper;
     },
     appendTo: "#canvas",
@@ -85,5 +86,4 @@ $(document).ready(function() {
   $(function() {
     $( "#tabs" ).tabs();
   });
-
 })
