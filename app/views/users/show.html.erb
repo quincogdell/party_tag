@@ -9,9 +9,10 @@
         </a>
         <% end %>
 
-        <div class="new-scrapbook preview">
-          <img src="addition_sign">
-          <%= link_to "new", "/events/#{event.id}" %>
+        <div class="new-scrapbook">
+          <a href= <%= "/events/#{event.id}" %>>
+            <img class="add-image" src="additition_sign.png">
+          </a>
         </div>
 
     <% end %>

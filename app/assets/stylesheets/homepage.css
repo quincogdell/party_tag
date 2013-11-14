@@ -5,6 +5,16 @@
 }
 
 .new-scrapbook {
+  width: 144px;
+  height: 95px;
   background-color: white;
   border: 3px grey dotted;
+  text-align: center;
+  display: inline-block;
+}
+
+.add-image {
+  height: 100px;
+  width: 100px;
+  margin: auto;
 }
