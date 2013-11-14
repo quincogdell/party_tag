@@ -1,5 +1,6 @@
 $(document).ready(function() {
   setSize();
+  $("#canvas").on("mouseup", changeOver);
 });
 $(window).resize(function() {setSize();});
 var setSize = function () {
@@ -22,3 +23,8 @@ var setSize = function () {
     $("#tabs ul li").css("font-size", size/7);
   };
 }
+var changeOver = function() {
+  $(".no-books").removeClass("no-books");
+  setSize();
+}
+
