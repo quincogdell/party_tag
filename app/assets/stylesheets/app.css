@@ -26,7 +26,6 @@ body {
   text-align: right;
   display: inline-block;
   margin-right: 5%;
-  font-size: 20px;
 }
 .second li {
   padding: 0px;
@@ -88,7 +87,7 @@ margin: 15px;
   max-width: 100%;
   min-width: 1100px;
   overflow: scroll;
-  background-color: #2980b9;
+  background-color: red;
 }
 #tabs {
   text-align: center;
