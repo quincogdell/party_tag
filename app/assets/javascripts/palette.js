@@ -1,12 +1,12 @@
 $(document).ready(function() {
   $(".palette").on("click", changePalette);
   $("#save-button").on("click", saveButton);
-  var palette = {
-    label: null
-  };
+
 });
 
-
+var palette = {
+    label: null
+  };
 var changePalette = function(e) {
   var label = $(this).attr("id")
   $("." + palette.label).not($(".palette")).removeClass(palette.label)
@@ -22,5 +22,5 @@ var saveButton = function(e) {
   e.preventDefault();
   Canvas.saveToDatabase();
   $("#saved").fadeIn('fast');
-  $("#saved").fadeOut('slow');
+  $("#saved").fadeOut(3000);
 }
