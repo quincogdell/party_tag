@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131112200633) do
+ActiveRecord::Schema.define(:version => 20131114163948) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -20,13 +20,7 @@ ActiveRecord::Schema.define(:version => 20131112200633) do
     t.datetime "updated_at", :null => false
     t.string   "location"
     t.date     "date"
-  end
-
-  create_table "hash_tags", :force => true do |t|
-    t.string   "tag_name"
-    t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "hash_tag"
   end
 
   create_table "images", :force => true do |t|

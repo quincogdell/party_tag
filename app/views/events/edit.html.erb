@@ -6,8 +6,8 @@
   <%= t.text_field "location", value: @event.location %><br>
   <%= t.label "Event Date" %>
   <%= t.text_field "date", value: @event.date, type: "date" %><br>
-  <%= label_tag "Hash tags to track, separated by commas" %>
-  <%= text_field_tag "tags", @tags.map { |tag| tag.tag_name  }.join(", ") %><br>
+  <%= label_tag "Hash tag to track" %>
+  <%= t.text_field "hash_tag", value: @event.hash_tag %><br>
   <%= t.submit %>
 <% end%>
   <%= button_to "Delete Event", @event, :method => :delete %>

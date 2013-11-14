@@ -7,6 +7,6 @@
   <%= t.label "Event Date" %>
   <%= t.text_field "date", value: Date.today, type: "date" %><br>
   <%= label_tag "HashTag to track (do not include the #)" %>
-  <%= text_field_tag "tags" %><br>
+  <%= t.text_field "hash_tag" %><br>
   <%= t.submit %>
 <% end%>
