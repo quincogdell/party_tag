@@ -73,7 +73,7 @@ Event.addInstagramPics = function(response){
 
         $commentsElement.append($commentsBody);
         $instagramElement.append($commentsElement);
-        debugger
+
       }
 
 
