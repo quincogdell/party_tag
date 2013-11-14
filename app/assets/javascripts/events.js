@@ -32,7 +32,7 @@ Event.queryTwitter = function() {
 
 Event.setEventListeners = function() {
   $instagram = $("#tabs-1");
-  $tag = $("#tags").text().trim();
+  // $tag = $("#data-hash-tags").text().trim();
   Event.eventId = $('#javascript-info').data('eventid');
   Event.hashTags = $('#javascript-info').data('hash-tags');
 
@@ -41,7 +41,7 @@ Event.setEventListeners = function() {
 Event.queryInstagram = function() {
   var clientID = "client_id=7201ce9799fa4f4b9d5b4ece1d9f8251";
   var url = "https://api.instagram.com/v1/";
-  var queryItem = "/tags/" + $tag + "/media/recent?";
+  var queryItem = "/tags/" + Event.hashTags + "/media/recent?";
   var queryString = url + queryItem + clientID;
 
   $.ajax({
@@ -53,7 +53,7 @@ Event.queryInstagram = function() {
 
 Event.addInstagramPics = function(response){
   var data = response.data;
-  console.log(data);
+  // console.log(data);
 
 
   $.each(data, function(){
