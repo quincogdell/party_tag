@@ -1,12 +1,21 @@
 <div id="nav-case"></div>
-<%= form_for @event  do |t| %>
-  <%= t.label "Event Name" %>
-  <%= t.text_field "title"%><br>
-  <%= t.label "Event Location" %>
-  <%= t.text_field "location" %><br>
-  <%= t.label "Event Date" %>
-  <%= t.text_field "date", value: Date.today, type: "date" %><br>
-  <%= label_tag "HashTag to track (do not include the #)" %>
-  <%= t.text_field "hash_tag" %><br>
-  <%= t.submit %>
-<% end%>
+
+<section class="event-form">
+  <%= form_for @event  do |t| %>
+
+    <%= t.text_field "title", placeholder: "Event Name"%>
+
+    <br>
+
+    <%= t.text_field "hash_tag", placeholder: "Event HashTag (without the #)" %>
+
+    <br>
+    <%= t.submit %>
+  <% end%>
+
+  <div id="notice">
+
+  </div>
+
+</section>
+  <%= javascript "event-form.js" %>

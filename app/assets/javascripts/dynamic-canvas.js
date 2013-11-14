@@ -9,7 +9,7 @@ Canvas.draggableInstagrams = function() {
     helper: "clone",
     helper: function() {
       var helper = $(this).clone()
-    .css({ "width":"250px"});
+    .css({ "width":"250px", "height":"250px"});
   return helper;
     },
     appendTo: "#canvas",
