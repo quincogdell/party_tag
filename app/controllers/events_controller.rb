@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 
     results.each do |result|
       res_hash = {}
-      res_hash[:text] = result.text
+      res_hash[:text] = result.text + " "
       res_hash[:author] = result.from_user
       res_array << res_hash
     end
