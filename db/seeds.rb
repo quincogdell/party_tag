@@ -15,7 +15,7 @@ u1 = User.new(name: 'cooper mayne')
 
 e1 = Event.new(title: 'party tag programming week')
 
-h1 = HashTag.new(tag_name: '#partytagworkweek')
+h1 = HashTag.new(tag_name: 'partytagworkweek')
 
 scrap1 = Scrapbook.new(name: 'the first scrap book')
 
