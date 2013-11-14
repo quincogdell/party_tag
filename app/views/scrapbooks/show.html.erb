@@ -1,4 +1,7 @@
-<div id="javascript-info" class="hidden" data-eventid=<%=@event.id%> data-hash-tags=<%= @event.hash_tag %>>0</div>
+<div id="javascript-info" class="hidden"
+  data-userid=<%= @current_user_id %>
+  data-eventid=<%=@event.id%>
+  data-hash-tags=<%= @event.hash_tag %>></div>
 <div class="nav second" id="second">
   <h2><%= @event.title %></h2>
   <ul>
@@ -44,8 +47,8 @@
     </div>
 
   </div>
-  <div id="canvas"> 
-    <%= @canvas_content.html_safe %>
+  <div id="canvas-container"> 
+    <%= @canvas_html.html_safe %>
   </div>
   <%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
 </div>
