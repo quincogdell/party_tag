@@ -102,7 +102,6 @@ Canvas.downloadURL= function(url) {
 };
 
 Canvas.save = function(name) {
-  Canvas.saveToDatabase();
   var canvasHtml = $('#canvas-container').html();
   $.ajax({
     url: "/scrapbooks",
