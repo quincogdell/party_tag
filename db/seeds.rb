@@ -13,13 +13,11 @@ Scrapbook.delete_all
 
 u1 = User.new(name: 'cooper mayne')
 
-e1 = Event.new(title: 'party tag programming week')
+e1 = Event.new({title: 'party tag programming week', hash_tag: 'partytagworkweek')
 
-h1 = HashTag.new(tag_name: 'partytagworkweek')
 
 scrap1 = Scrapbook.new(name: 'the first scrap book')
 
-e1.hash_tags << h1
 e1.scrapbooks << scrap1
 
 u1.events << e1

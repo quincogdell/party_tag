@@ -66,6 +66,7 @@ body {
 .scrapbooks {
 display: none;
 margin: 15px;
+text-align: center;
 }
 .no-books #canvas {
   width: 400px;

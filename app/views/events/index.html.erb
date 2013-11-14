@@ -2,7 +2,7 @@
 <ul>
 <% @events.each do |event| %>
   <li><%= link_to event.title, "/events/#{event.id}" %><br>
-    tags: <%= event.hash_tags.map { |tag| tag.tag_name }.join(", ") %>
+    tag: <%= event.hash_tag %>
   </li>
 <% end %>
 </ul>

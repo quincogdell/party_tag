@@ -12,6 +12,5 @@
 class Event < ActiveRecord::Base
    attr_accessible :title, :user_id, :hash_tag, :location, :date
    belongs_to :user
-   has_many :hash_tags
    has_many :scrapbooks
 end
