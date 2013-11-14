@@ -12,7 +12,8 @@ body {
   z-index: 101;
 }
 .nav h2 {
-  padding: 15px;
+  margin-left: 20px;
+  margin-top: 18px;
   float: left;
 }
 .nav a {
@@ -22,10 +23,12 @@ body {
   text-align: right;
 }
 .nav li {
-  padding: 15px;
+  padding-top: 25px;
+  padding-bottom: 5px;
   text-align: right;
   display: inline-block;
-  margin-right: 5%;
+  margin-right: 15px;
+  font-size: 18px;
 }
 .second li {
   padding: 0px;
