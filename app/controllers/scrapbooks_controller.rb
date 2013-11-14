@@ -6,9 +6,19 @@ class ScrapbooksController < ApplicationController
     respond_with @scrapbook
   end
   def create
-    @scrapbook = Scrapbook.create(params[:scrapbook])
-    respond_with @scrapbook
-    redirect_to "/scrapbooks/@scrapbook.id"
+    @scrapbook = Scrapbook.new
+    @scrapbook.user = User.find(params[:user_id])
+    @scrapbook.event = Event.find(params[:event_id])
+    @scrapbook.html = params[:html]
+    respond_to do |format|
+      if @scrapbook.save
+        msg = { :status => "ok", :message => "Success", :html => "<b>...</b>" }
+        format.json  { render :json => msg } # don't do msg.to_json
+      else
+        msg = { :status => "boo", :message => "Failure", :html => "<b>...</b>" }
+        format.json  { render :json => msg } # don't do msg.to_json
+      end
+    end
   end
   def update
     @scrapbook = Scrapbook.find(params[:id])

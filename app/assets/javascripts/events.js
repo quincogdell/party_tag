@@ -37,6 +37,7 @@ Event.setEventListeners = function() {
   // $tag = $("#data-hash-tags").text().trim();
   Event.eventId = $('#javascript-info').data('eventid');
   Event.hashTags = $('#javascript-info').data('hash-tags');
+  Event.userId = $('#javascript-info').data('userid');
 
 };
 

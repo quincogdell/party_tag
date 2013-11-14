@@ -38,10 +38,10 @@ Canvas.droppableCanvas = function() {
     drop: function( event, ui ) {
       if (ui.draggable.hasClass('tweet-container')) {
         var $droppedElement = ui.helper.clone()
-    .resizable();
+          .resizable();
       } else {
         var $droppedElement = ui.helper.clone()
-    .resizable({ aspectRatio: true });
+          .resizable({ aspectRatio: true });
       }
       $droppedElement.draggable({
         start: function() {
@@ -49,13 +49,16 @@ Canvas.droppableCanvas = function() {
           $(this).css({"z-index":Canvas.zIndex});
         }
       });
+      $droppedElement.on('dblclick', function() {
+        this.remove()
+      })
+
       $(this).append($droppedElement);
     }
   });
 };
 
-
-Canvas.saveCanvas = function () {
+Canvas.downloadCanvas = function () {
   html2canvas(document.getElementById('canvas'), {
     logging: true,
     onrendered: function(canvas) {
@@ -66,7 +69,7 @@ Canvas.saveCanvas = function () {
   });
 }
 
-function downloadURL(url) {
+Canvas.downloadURL= function(url) {
   var hiddenIFrameID = 'hiddenDownloader',
       iframe = document.getElementById(hiddenIFrameID);
   if (iframe === null) {
@@ -76,6 +79,20 @@ function downloadURL(url) {
     document.body.appendChild(iframe);
   }
   iframe.src = url;
+};
+
+Canvas.save = function() {
+  var canvasHtml = $('#canvas').html();
+  $.ajax({
+    url: "/scrapbooks",
+    type: "POST",
+    data: { 
+      user_id: Event.userId, 
+      event_id: Event.eventId, 
+      html : canvasHtml 
+    },
+    dataType: "json"
+  });
 };
 
 $(document).ready(function() {
