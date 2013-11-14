@@ -5,5 +5,6 @@
 }
 
 .new-scrapbook {
-  background-color: grey;
+  background-color: white;
+  border: 3px grey dotted;
 }
