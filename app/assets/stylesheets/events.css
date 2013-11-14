@@ -3,10 +3,23 @@
   font-size: 75%;
 }
 
+.insta-image {
+  width: 80%;
+
+}
+
 .instaUser {
   color: red;
 }
 
 .instaText {
   color: white;
+}
+
+#notice {
+  color: red;
+}
+
+.event-form {
+  text-align: center;
 }
