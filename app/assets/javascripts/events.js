@@ -62,27 +62,58 @@ Event.addInstagramPics = function(response){
   var data = response.data;
 
   $.each(data, function(){
-      var $instagramElement = $("<div />").addClass("instagram");
+
+      //create the new base elements for the instagram
+      var $instagramElement = $("<div />").addClass("instagram").attr('id', instaId);
       var $instagramImage = $("<div />").addClass("insta-image");
       var $instagramExtras = $("<div />").addClass("insta-extras");
-      var commentsCount = this.comments.count;
 
-
+      // other meta data from the instagram json
+      var numComments = this.comments.count;
+      var instaId = this.id;
       var img_url = this.images.standard_resolution.url;
-      $instagramImage.append($("<img/>").attr("src", img_url));
 
+      // add image and append to instagramElement
+      $instagramImage.append($("<img/>").attr("src", img_url));
       $instagramElement.append($instagramImage);
 
-      if (commentsCount !== 0) {
-        // debugger
-        var commentsText = this.comments.data[0].text;
-        var $commentsBody = $("<p />").text(commentsText);
+      // re-create the caption
+      var $imageOwner = $("<span />").addClass("instaUser");
+      $imageOwner.append("@" + this.user.username + " ");
+      var $instaCaption = $("<p />").addClass("instaCaption");
+      var $caption = $("<span />").addClass("instaText");
+      $caption.append(this.caption.text);
 
-        $instagramExtras.append($commentsBody);
+      // append the content to the caption
+      // and the caption to the Extras
+      $instaCaption.append($imageOwner);
+      $instaCaption.append($caption);
+      $instagramExtras.append($instaCaption);
 
-        $instagramElement.append($instagramExtras);
+      // extras are all comments other than the caption
+      var $extraContent = $("<p />");
 
+      if (numComments !== 0) {
+
+        var commentsData = this.comments.data;
+        $.each(commentsData, function() {
+          var $comment = $("<p />");
+          var $commentOwner = $('<span />').addClass("instaUser");
+          $commentOwner.append("@" + this.from.username + " ");
+          var $commentText = $("<span />").addClass("instaText");
+          $commentText.append(this.text);
+          $comment.append($commentOwner);
+          $comment.append($commentText);
+          $extraContent.append($comment);
+        });
       }
+
+      // $extraContent.append($comments);
+
+
+
+      $instagramExtras.append($extraContent);
+      $instagramElement.append($instagramExtras);
       $instagram.append($instagramElement);
     });
 };
