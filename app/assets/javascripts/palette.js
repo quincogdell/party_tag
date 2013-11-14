@@ -12,8 +12,4 @@ var changePalette = function(label) {
   palette.label = label;
 }
 
-var changeOver = function(e) {
-  $(".no-books").removeClass(".no-books");
-}
 
-$("#canvas").on("mouseover", changeOver);
