@@ -21,6 +21,6 @@ var changePalette = function(e) {
 var saveButton = function(e) {
   e.preventDefault();
   Canvas.saveToDatabase();
-  $("#saved").fadeIn(fast);
-  $("#saved").fadeOut(slow);
+  $("#saved").fadeIn('fast');
+  $("#saved").fadeOut('slow');
 }
