@@ -9,9 +9,10 @@ var setSize = function () {
   clear += $("#second").height();
   clear += 20;
   $("#nav-case").css("height", clear);
-  $("tabs").css("margin-top", clear);
+  $("#tabs").css("margin-top", clear);
+  clear += $("#tabs").height();
   height = $(window).height() - clear;
-  $("#tabs").css("height", height);
+  $("#views").css("height", height);
   var width = $("#container").width();
   width -= $("#canvas").width();
   width -= 12;

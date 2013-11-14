@@ -25,15 +25,17 @@
 <div id="nav-case"></div>
 <div id="container" class = "no-books">
   <div id="tabs" class="no-books">
-    <div id="button-div" class="hidden">
+    <ul>
+      <div id="button-div" class="hidden">
       <%= text_field_tag "scrap-name", nil, placeholder: "Name this collage"%>
       <%= submit_tag "save", id: "save-button" %>
     </div>
-    <ul>
       <li><a href="#tabs-1">Instagrams</a></li>
       <li><a href="#tabs-2">Tweets</a></li>
       <li><a href="#tabs-3">Palettes</a></li>
     </ul>
+  </div>
+  <div id="view">
     <div id="tabs-1">
     </div>
     <div id="tabs-2">
