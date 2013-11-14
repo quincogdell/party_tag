@@ -7,6 +7,7 @@ class ScrapbooksController < ApplicationController
     respond_with @scrapbook
   end
   def create
+    binding.pry
     @scrapbook = Scrapbook.new
     @scrapbook.user = User.find(params[:user_id])
     @scrapbook.event = Event.find(params[:event_id])
