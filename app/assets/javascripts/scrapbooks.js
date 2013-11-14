@@ -10,7 +10,11 @@ $(document).ready(function() {
   Scrapbook.eventId = $('#javascript-info').data('eventid');
   Scrapbook.hashTags = $('#javascript-info').data('hash-tags');
 });
-
+$(window).resize(function () {
+  var clear = $("#second").height();
+  clear += $("nav").height();
+  console.log(clear);
+});
 var Scrapbook = {};
 var instaData, $instagram, response;
 
