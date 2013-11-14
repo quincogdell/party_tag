@@ -8,20 +8,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="nav">
-    <% if current_user %>
-    <h2><%= current_user.name %></h2>
-    <ul>
-      <li><%= link_to "Create new event", "/events/new" %></li>
 
-      <li><%= link_to "My events", "/events" %></li>
-    </ul>
-    <% else %>
-    <%= link_to "Log In", "/login" %>
-    <% end %>
-  </div>
+    <div class="nav">
+      <% if current_user %>
+      <h2><%= current_user.name %></h2>
+      <ul>
+        <li><%= link_to "Create new event", "/events/new" %></li>
 
-  <%= yield %>
+        <li><%= link_to "My events", "/events" %></li>
+      </ul>
+      <% else %>
+      <h2><%= link_to "Log In", "/login" %></h2>
+      <% end %>
+    </div>
+
+    <%= yield %>
 
 </body>
 </html>
