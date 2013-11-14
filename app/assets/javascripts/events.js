@@ -48,19 +48,22 @@ Event.queryInstagram = function() {
     type: 'get',
     url: queryString,
     dataType: "jsonp",
-  }).done(Event.addInstagramPics);
+  }).done(function(response){
+    Event.addInstagramPics(response);
+    Canvas.dragableInstagram();
+    Canvas.dragableTweets();
+  });
 };
 
 Event.addInstagramPics = function(response){
   var data = response.data;
-  // console.log(data);
-
 
   $.each(data, function(){
-      var $instagramElement = $("<div />");
-      var $instagramImage = $("<div />");
-      var $commentsElement = $("<div />");
+      var $instagramElement = $("<div />").addClass("instagram");
+      var $instagramImage = $("<div />").addClass("insta-image");
+      var $instagramExtras = $("<div />").addClass("insta-extras");
       var commentsCount = this.comments.count;
+
 
       var img_url = this.images.standard_resolution.url;
       $instagramImage.append($("<img/>").attr("src", img_url));
@@ -68,11 +71,13 @@ Event.addInstagramPics = function(response){
       $instagramElement.append($instagramImage);
 
       if (commentsCount !== 0) {
+
         var commentsText = this.comments.data[0].text;
         var $commentsBody = $("<p />").text(commentsText);
 
-        $commentsElement.append($commentsBody);
-        $instagramElement.append($commentsElement);
+        $instagramExtras.append($commentsBody);
+
+        $instagramElement.append($instagramExtras);
 
       }
 
