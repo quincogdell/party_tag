@@ -1,19 +1,22 @@
 .instagram {
-  border: 1px solid black;
+  border: 1px #333 dashed;
+  outline: 1px #333 solid
   font-size: 75%;
 }
 
 .insta-image {
-  width: 80%;
+  width: 60%;
 
 }
 
 .instaUser {
   color: red;
+  font-size: 75%;
 }
 
 .instaText {
   color: white;
+  font-size: 75%;
 }
 
 #notice {
