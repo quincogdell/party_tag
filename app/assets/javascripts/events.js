@@ -15,6 +15,7 @@ Event.queryTwitter = function() {
     type: "GET",
     dataType: "json"
   }).done(function(tweets_array) {
+
     $.each(tweets_array, function(index, tweet) {
       var tweetEl = $('<div></div>').addClass('tweet-container');
 
@@ -27,6 +28,7 @@ Event.queryTwitter = function() {
       tweetEl.append(tweetAuthor);
       $('#tabs-2').append(tweetEl);
     });
+    Canvas.draggableTweets();
   });
 };
 
@@ -50,8 +52,8 @@ Event.queryInstagram = function() {
     dataType: "jsonp",
   }).done(function(response){
     Event.addInstagramPics(response);
-    Canvas.dragableInstagram();
-    Canvas.dragableTweets();
+    Canvas.draggableInstagrams();
+
   });
 };
 
@@ -71,7 +73,7 @@ Event.addInstagramPics = function(response){
       $instagramElement.append($instagramImage);
 
       if (commentsCount !== 0) {
-        debugger
+        // debugger
         var commentsText = this.comments.data[0].text;
         var $commentsBody = $("<p />").text(commentsText);
 
