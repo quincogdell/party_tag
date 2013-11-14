@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131114163948) do
+ActiveRecord::Schema.define(:version => 20131114212221) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20131114163948) do
     t.datetime "updated_at", :null => false
     t.integer  "event_id"
     t.text     "html"
+    t.text     "canvas"
   end
 
   create_table "tweets", :force => true do |t|

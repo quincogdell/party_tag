@@ -58,13 +58,33 @@ Canvas.droppableCanvas = function() {
   });
 };
 
+Canvas.saveToDatabase = function () {
+  html2canvas(document.getElementById('canvas'), {
+    logging: true,
+    onrendered: function(canvas) {
+      var img = canvas.toDataURL("image/png");
+      $.ajax({
+        url: "/scrapbooks",
+        type: "POST",
+        data: {
+          name: name,
+          user_id: Event.userId,
+          event_id: Event.eventId,
+          canvas: img
+          },
+          dataType: "json"
+      })
+    }
+  });
+}
+
 Canvas.downloadCanvas = function () {
   html2canvas(document.getElementById('canvas'), {
     logging: true,
     onrendered: function(canvas) {
       var img = canvas.toDataURL("image/png");
       img = img.replace("image/png","xx/xx");
-      downloadURL(img);
+      Canvas.downloadURL(img);
     }
   });
 }
@@ -82,6 +102,7 @@ Canvas.downloadURL= function(url) {
 };
 
 Canvas.save = function(name) {
+  Canvas.saveToDatabase();
   var canvasHtml = $('#canvas-container').html();
   $.ajax({
     url: "/scrapbooks",
