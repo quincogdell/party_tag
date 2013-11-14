@@ -48,7 +48,9 @@
       <li><%= link_to book.name, "/scrapbooks/#{book.id}" %></li>
       <% end%>
     </div>
-    <div id="canvas"> drag here to create a new scrap book</div>
+    <div id="canvas-container">
+      <div id="canvas"> drag here to create a new scrap book</div>
+    </div>
   </div>
   <%= javascript "events.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
 </div>
