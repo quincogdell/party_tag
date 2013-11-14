@@ -8,7 +8,6 @@ var setSize = function () {
   var clear = $("#nav").height();
   $("#second").css("margin-top", clear);
   clear += $("#second").height();
-  clear += 20;
   $("#nav-case").css("height", clear);
   height = $(window).height() - clear;
   $("#tabs-div").css("height", height);
