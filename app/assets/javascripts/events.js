@@ -54,10 +54,32 @@ Event.queryInstagram = function() {
 Event.addInstagramPics = function(response){
   var data = response.data;
   console.log(data);
+
+
   $.each(data, function(){
+      var $instagramElement = $("<div />");
+      var $instagramImage = $("<div />");
+      var $commentsElement = $("<div />");
+      var commentsCount = this.comments.count;
+
       var img_url = this.images.standard_resolution.url;
-      console.log(img_url);
-      $instagram.append($("<img/>").attr("src", img_url));
+      $instagramImage.append($("<img/>").attr("src", img_url));
+
+      $instagramElement.append($instagramImage);
+
+      if (commentsCount !== 0) {
+        var commentsText = this.comments.data[0].text;
+        var $commentsBody = $("<p />").text(commentsText);
+
+        $commentsElement.append($commentsBody);
+        $instagramElement.append($commentsElement);
+        debugger
+      }
+
+
+
+      $instagram.append($instagramElement);
+      // $instagram.append($("<img/>").attr("src", img_url));
     });
 };
 
