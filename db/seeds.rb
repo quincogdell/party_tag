@@ -8,14 +8,10 @@
 #
 User.delete_all
 Event.delete_all
-HashTag.delete_all
 Scrapbook.delete_all
 
 u1 = User.new(name: 'cooper mayne')
-
 e1 = Event.new({title: 'party tag programming week', hash_tag: 'partytagworkweek')
-
-
 scrap1 = Scrapbook.new(name: 'the first scrap book')
 
 e1.scrapbooks << scrap1
