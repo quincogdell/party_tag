@@ -20,6 +20,10 @@
 .no-books ul:nth-child(3) {
   display: none;
 }
+#canvas-container {
+  
+}
+
 #canvas {
   width: 900px;
   background-color: red;
