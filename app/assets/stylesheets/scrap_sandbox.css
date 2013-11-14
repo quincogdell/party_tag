@@ -21,12 +21,12 @@
   display: none;
 }
 #canvas-container {
-  
+
 }
 
 #canvas {
   width: 900px;
-  background-color: red;
+  background-color: rgba(180, 181, 182, 1);
   height: 600px;
   float: right;
   border: 5px solid black;
