@@ -99,7 +99,7 @@ margin: 15px;
   display: inline-block;
   float: left;
   margin: 0px;
-  height: 600px;
+  height: 100%;
   overflow: scroll;
   z-index: 100;
 }

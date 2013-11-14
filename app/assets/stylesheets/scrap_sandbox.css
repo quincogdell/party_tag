@@ -8,14 +8,18 @@
 
 #tabs {
  /* max-width: 25%;
-  background-color: grey;*/
+ background-color: grey;*/
 }
 
 #tabs-1 {
-background-color: #2980b9;
+  background-color: #2980b9;
 }
-#tab-2 {}
-
+.no-books #tabs-3 {
+  display: none;
+}
+.no-books ul:nth-child(3) {
+  display: none;
+}
 #canvas {
   width: 900px;
   background-color: red;
