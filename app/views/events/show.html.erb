@@ -27,9 +27,9 @@
   <div id="tabs">
     <div id="buttons">
       <ul>
-        <div id="button-div">
+        <div id="save-button">
           <div id="saved">Successfully Saved!</div>
-          <%= submit_tag "Save This Collage", id: "save-button" %>
+            <div id="button">Save This Collage</div>
         </div>
         <li><a href="#tabs-1">Instagrams</a></li>
         <li><a href="#tabs-2">Tweets</a></li>
@@ -58,7 +58,7 @@
       <% end%>
     </div>
     <div id="canvas-container">
-      <div id="canvas"> drag here to create a new scrap book</div>
+      <div id="canvas"></div>
     </div>
   </div>
   <%= javascript "events.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
