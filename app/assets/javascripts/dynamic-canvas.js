@@ -9,7 +9,7 @@ Canvas.draggableInstagrams = function() {
     helper: "clone",
     helper: function() {
       var helper = $(this).clone()
-    .css({ "width":"250px", "height": "250px" });
+    .css({ "width":"250px"});
   return helper;
     },
     appendTo: "#canvas",
@@ -86,10 +86,10 @@ Canvas.save = function() {
   $.ajax({
     url: "/scrapbooks",
     type: "POST",
-    data: { 
-      user_id: Event.userId, 
-      event_id: Event.eventId, 
-      html : canvasHtml 
+    data: {
+      user_id: Event.userId,
+      event_id: Event.eventId,
+      html : canvasHtml
     },
     dataType: "json"
   });
