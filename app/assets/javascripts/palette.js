@@ -20,8 +20,7 @@ var changePalette = function(e) {
 
 var saveButton = function(e) {
   e.preventDefault();
-  var name = $("#scrap-name").val();
-  Canvas.save(name);
+  Canvas.saveToDatabase();
   $("#saved").fadeIn(fast);
   $("#saved").fadeOut(slow);
 }
