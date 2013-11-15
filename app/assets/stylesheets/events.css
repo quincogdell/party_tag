@@ -1,7 +1,7 @@
 .instagram {
   width: 90%;
   background: white;
-  padding: 15px 15px 40px 15px;
+  padding: 15px 15px 15px 15px;
   background: #fff;
   box-shadow: 0 1px 4px #888;
   overflow: hidden;
@@ -31,6 +31,10 @@
   font-size: 75%;
   font-family: "Architects Daughter";
 
+}
+
+.instaCaption {
+  font-size: 20px;
 }
 
 .instaText {
