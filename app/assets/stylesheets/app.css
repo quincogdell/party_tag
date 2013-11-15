@@ -164,10 +164,6 @@ text-align: center;
 a {
   text-decoration: none;
 }
-div.palette {
-  margin: 10px;
-  background-color: red;
-}
 
 .canvas-container-display {
   text-align: center;

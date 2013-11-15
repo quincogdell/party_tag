@@ -1,0 +1,48 @@
+.cork#canvas {
+  background:#ffffff url('/cork.jpg') repeat right top;
+}
+
+.palette.cork {
+  background:#ffffff url('/cork.jpg') repeat right top;
+}
+
+.wood#canvas {
+  background:#ffffff url('/paper.jpg') repeat right top;
+}
+
+.palette.wood {
+  background:#ffffff url('/paper.jpg') repeat right top;
+}
+
+.cross#canvas {
+  background:#ffffff url('/bg.jpg') repeat right top;
+}
+
+.palette.cross {
+  background:#ffffff url('/bg.jpg') repeat right top;
+}
+
+.crazy#canvas {
+  background:#ffffff url('/crazy.jpg') repeat right top;
+}
+
+.palette.crazy {
+  background:#ffffff url('/crazy.jpg') repeat right top;
+}
+
+.white#canvas {
+  background:white;
+}
+
+.palette.white {
+  background:white;
+}
+
+
+.palette {
+  width:45%;
+  height: 100px;
+  display:inline-block;
+  float:left;
+  margin: 4px;
+}

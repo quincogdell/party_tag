@@ -10,8 +10,8 @@ var palette = {
 var changePalette = function(e) {
   var label = $(this).attr("id")
   $("." + palette.label).not($(".palette")).removeClass(palette.label)
-  $(".image-container").addClass(label);
-  $(".tweet-container").addClass(label);
+  //$(".image-container").addClass(label);
+  //$(".tweet-container").addClass(label);
   $("#canvas").addClass(label);
   var color = $("#canvas").css("background-color");
   $("#container").css("background-color", color);
