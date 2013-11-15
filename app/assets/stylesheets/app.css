@@ -91,7 +91,7 @@ text-align: center;
   clear: top;
   position: relative;
   max-width: 100%;
-  min-width: 1100px;
+  min-width: 1200px;
   overflow: scroll;
   background-color: #ecf0f1;
 }
@@ -127,7 +127,6 @@ text-align: center;
   border: none;
 }
 #tabs-div {
-  padding-top: 15px;
 }
 #buttons ul li, #button {
   text-decoration: none;
@@ -135,7 +134,7 @@ text-align: center;
   text-align: center;
   background-image: none;
   background-color: #3498db;
-  width: auto;
+  width: 25%;
   border-top: 1px solid #2c3e50;
   border-left: 3px solid #2c3e50;
   border-right: 1px solid #2c3e50;
@@ -183,4 +182,9 @@ a {
 
 .form {
   margin-top: 15px;
+}
+
+h2.title-header {
+  margin-top: 15px;
+  display: inline-block;
 }

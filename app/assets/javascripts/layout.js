@@ -8,8 +8,9 @@ $(document).ready(function() {
     var clear = $("#nav").height();
     clear += 10;
     $("#nav-case").css("height", clear);
+    clear -= 10;
     height = $(window).height() - clear;
-    $("#tabs-div").css("height", height);
+    $("#tabs").css("height", height);
     var width = $("#container").width();
     width -= $("#canvas").width();
     width -= 12;
@@ -18,9 +19,9 @@ $(document).ready(function() {
     $("#tabs").css("width", width);
     var size = $("#buttons ul li").width();
     if (size/7 < 26) {
-      $("#tabs ul li").css("font-size", size/7);
+      $("#buttons ul").css("font-size", size/7);
     };
-    $("#tab-clear").css("height", $("#buttons").height());
+    $("#tab-clear").css("height", $("#buttons").height() + 20);
   }
   var changeOver = function() {
     if ($("#container").hasClass("no-books")) {
