@@ -26,6 +26,8 @@
   height: 50px;
   width: 50px;
   position: absolute;
+  margin-top: 21px;
+  margin-left: -23px;
 }
 
 .title-header {
