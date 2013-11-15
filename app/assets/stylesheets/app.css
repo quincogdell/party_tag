@@ -167,4 +167,11 @@ div.palette {
   background-color: red;
 }
 
+.canvas-container-display {
+  text-align: center;
+}
 
+.display-canvas {
+  width: 800px;
+  margin: 20px 20px;
+}
