@@ -188,3 +188,14 @@ h2.title-header {
   margin-top: 15px;
   display: inline-block;
 }
+.landing {
+  text-align: center;
+}
+h1.landing {
+  font-size: 24px;
+  margin: 15px;
+}
+.landing li {
+  text-align: left;
+  margin-left: 40%;
+ }
