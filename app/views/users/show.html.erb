@@ -7,6 +7,12 @@
     <%= t.text_field "hash_tag", placeholder: "Event HashTag (without the #)" %>
     <%= t.submit "Create New Event"%>
   <% end%>
+
+  <div id="notice">
+
+  </div>
+
+
   <% @events.each do |event| %>
     <div class='event-container'>
     <h2 class="title-header"><%= event.title %></h2>
@@ -25,3 +31,5 @@
   </div>
 <% end %>
 </div>
+
+<%= javascript "event-form.js" %>
