@@ -14,7 +14,6 @@ class Scrapbook < ActiveRecord::Base
   attr_accessible :name
   attr_accessible :canvas
   attr_accessible :html
-  has_many :pages
   belongs_to :event
   belongs_to :user
 end
