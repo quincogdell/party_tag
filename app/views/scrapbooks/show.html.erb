@@ -1,15 +1,30 @@
 
 <div id="nav-case"></div>
 
-<div class="fb-share-button" data-href="http://www.thepartytag.com/scrapbooks/" data-width="100px" data-type="button"></div>
+
+
+<div class="share">
+  <span>Share this #PartyTag Scrapbook on Facebook!</span>
+  <div class="fb-share-button" data-href="http://www.thepartytag.com/scrapbooks/<%=@scrapbook.id%>" data-width="100px" data-type="button"></div>
+</div>
 
 <div id="canvas-container-display">
   <img class='display-canvas' src=<%= @scrapbook.canvas %>>
+
 </div>
-<%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
+
+
+
+
 
 <div id="fb-root" >
 </div>
+
+
+
+<%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
+
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
