@@ -7,6 +7,7 @@
     <meta property="fb:app_id" content="522181411222799"/>
     <meta property="og:title" content=<%= @scrapbook.event.title %>/>
     <meta property="og:site_name" content="Party Tag"/>
+    <meta property="og:image" content=<%= "http://www.thepartytag.com/scrapbooks/#{@scrapbook.id}.png" %>/>
     <meta property="og:description" content="I just made a scrapbook!"/>
   <% end %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -25,8 +26,7 @@
      <li><%= link_to "Create Event", "/" %></li>
      <li><%= link_to "Log Out", "/signout" %></li>
      <% else %>
-
-     <li><%= link_to("Login", "/auth/facebook") %> </li></h2>
+     <li><%= link_to "Log In", "/login" %></li>
      <% end %>
    </ul>
  </div>
