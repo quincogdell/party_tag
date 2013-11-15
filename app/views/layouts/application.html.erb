@@ -10,7 +10,9 @@
 <body>
   <div class="nav" id="nav">
     <a href="/"><h2>The Party Tag</h2></a>
-    <h2 class="second"><%= link_to @event.title, "/events/#{@event.id}/edit" if @event.id %></h2>
+    <% if @event && @event.id  %>
+    <h2 class="second"><%= link_to @event.title, "/events/#{@event.id}/edit" %></h2>
+    <% end %>
     <ul>
        <% if current_user %>
       <li><%= link_to "Create Event", "/" %></li>
