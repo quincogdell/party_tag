@@ -15,6 +15,7 @@ body {
   margin-left: 20px;
   margin-top: 20px;
   float: left;
+  text-align: left;
 }
 .nav a {
   color: #bdc3c7;
@@ -22,6 +23,7 @@ body {
 .nav ul {
   float: right;
   text-align: right;
+
 }
 .nav li {
   padding-top: 25px;
@@ -40,15 +42,16 @@ body {
   min-height: 90px;
 }
 .second {
-  float: left;
+  /*float: left;*/
   display: inline-block;
   color: #3DDDFF;
 }
 h2.second {
   font-size: 20px;
-  margin-top: 22px;
-  padding: 0px;
-  padding-left: 25%;
+  /*margin-top: 22px;*/
+  /*padding: 0px;*/
+  /*padding-left: 25%;*/
+  text-align: center;
 }
 .second a {
    color: #3DDDFF;
@@ -172,15 +175,13 @@ a {
   margin-top: 0px;
 }
 .canvas-container-display {
-  text-align: center;
   padding-left: 50px;
-
 }
 
 .display-canvas {
 
   width: 800px;
-
+  display: block;
   margin: 0 auto;
   /*margin: 20px 20px;*/
 
@@ -205,3 +206,11 @@ h1.landing {
   text-align: left;
   margin-left: 40%;
  }
+
+
+.nav h2, .nav ul {
+  display: inline;
+}
+.nav ul {
+  text-align: right;
+}
