@@ -1,29 +1,19 @@
-<div id="javascript-info" class="hidden"
-  data-userid=<%= @current_user_id %>
-  data-eventid=<%=@event.id%>
-  data-hash-tags=<%= @event.hash_tag %>></div>
-<div class="nav second" id="second">
-  <h2><%= @event.title %></h2>
-  <ul>
-    <li>
-    <strong>At:</strong>
-    <%= @event.location %>
-    </li>
-    <li>
-    <strong>On:</strong>
-    <%= "#{@event.date}" %>
-    </li>
-    <li>
-    <strong>tracked tags:</strong>
-    <%= @event.hash_tag %>
-    </li>
-    <li>
-    <%= link_to "edit", "/events/#{@event.id}/edit" %>
-    </li>
-  </ul>
-</div>
+
 <div id="nav-case"></div>
-<div id="canvas-container-display"> 
+
+<div class="fb-share-button" data-href="http://www.thepartytag.com/scrapbooks/" data-width="100px" data-type="button"></div>
+
+<div id="canvas-container-display">
   <img class='display-canvas' src=<%= @scrapbook.canvas %>>
 </div>
 <%= javascript "scrapbooks.js", "dynamic-canvas.js", "palette.js", "html2canvas.js" %>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=522181411222799";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
