@@ -9,7 +9,7 @@
   <% end%>
   <% @events.each do |event| %>
     <div class='event-container'>
-    <h2 class="title-header"><%= event.title %></h2>
+    <h2 class="title-header"><%= event.title %></h2><hr>
     <% event.scrapbooks.each do |scrapbook| %>
       <a href=<%= "/scrapbooks/#{scrapbook.id}" %>>
       <img class='preview' src=<%= scrapbook.canvas %>>
