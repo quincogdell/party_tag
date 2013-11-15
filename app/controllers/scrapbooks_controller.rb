@@ -1,5 +1,6 @@
 class ScrapbooksController < ApplicationController
   respond_to :json, :html
+
   def show
     @scrapbook = Scrapbook.find(params[:id])
     @canvas_html = @scrapbook.html
