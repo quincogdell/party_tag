@@ -32,13 +32,39 @@ Canvas.draggableTweets = function() {
   });
 };
 
+(function($) {
+  $.fn.textfill = function(options) {
+    var fontSize = options.maxFontPixels;
+    var ourText = $(this).find('span').first();
+    var nextText = $(this).find('span').last();
+    var maxHeight = $(this).height();
+    var maxWidth = $(this).width();
+    var textHeight;
+    var textWidth;
+    do {
+      ourText.css('font-size', fontSize);
+      nextText.css('font-size', fontSize*2/3);
+      textHeight = ourText.height();
+      textWidth = ourText.width();
+      fontSize = fontSize - 1;
+    } while ((textHeight > (maxHeight - nextText) || textWidth > maxWidth) && fontSize > 3);
+return this;
+  }
+})(jQuery);
+
+Canvas.draggableBg = function() {};
+
 Canvas.droppableCanvas = function() {
   $( '#canvas' ).droppable({
     accept: "#tabs-1 .instagram, #tabs-2 .tweet-container",
     drop: function( event, ui ) {
       if (ui.draggable.hasClass('tweet-container')) {
         var $droppedElement = ui.helper.clone()
-          .resizable();
+          .resizable({
+            resize: function() {
+              $($droppedElement).textfill({ maxFontPixels: 50 });
+            }
+          });
       } else {
         var $droppedElement = ui.helper.clone()
           .resizable({ aspectRatio: true });
@@ -54,6 +80,9 @@ Canvas.droppableCanvas = function() {
       })
 
       $(this).append($droppedElement);
+      if ($droppedElement.hasClass('tweet-container')){
+        $($droppedElement).textfill({ maxFontPixels: 36 });
+      }
     }
   });
 };

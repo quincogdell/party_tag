@@ -40,7 +40,7 @@ img {
 .tweet-container {
   background: url("/paper_2.jpg") no-repeat center;
   margin: 3px 0;
-  padding: 3px;
+  padding: 7px;
   max-width: 376px;
   max-height: 299px;
 }
