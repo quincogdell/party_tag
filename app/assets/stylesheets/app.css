@@ -173,11 +173,17 @@ a {
 }
 .canvas-container-display {
   text-align: center;
+  padding-left: 50px;
+
 }
 
 .display-canvas {
+
   width: 800px;
-  margin: 20px 20px;
+
+  margin: 0 auto;
+  /*margin: 20px 20px;*/
+
 }
 
 .form {
