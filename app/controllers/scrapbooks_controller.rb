@@ -3,10 +3,18 @@ class ScrapbooksController < ApplicationController
 
   def show
     @scrapbook = Scrapbook.find(params[:id])
-    @canvas_html = @scrapbook.html
     @canvas_el = @scrapbook.canvas
-    @event = @scrapbook.event
-    respond_with @scrapbook
+    respond_to do |format|
+      format.png do
+        @canvas_el.gsub!("data:image/png;base64,","")
+        decoded_image = Base64.decode64(@canvas_el)
+        send_data decoded_image, :type => 'image/png', :disposition => 'inline'
+      end
+      format.html do
+        @event = @scrapbook.event
+        respond_with @scrapbook
+      end
+    end
   end
   def create
     @scrapbook = Scrapbook.new
