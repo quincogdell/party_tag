@@ -4,6 +4,7 @@ class UsersController < ApplicationController
       @user = User.find(session[:user_id])
       @events = @user.events
       @books = @user.scrapbooks
+      @event = Event.new
     else
       redirect_to "/login"
     end

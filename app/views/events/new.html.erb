@@ -2,13 +2,9 @@
 
 <section class="event-form">
   <%= form_for @event  do |t| %>
-
     <%= t.text_field "title", placeholder: "Event Name"%>
-
     <br>
-
     <%= t.text_field "hash_tag", placeholder: "Event HashTag (without the #)" %>
-
     <br>
     <%= t.submit %>
   <% end%>

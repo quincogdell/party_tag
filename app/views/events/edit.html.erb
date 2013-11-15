@@ -1,10 +1,10 @@
 <div id="nav-case"></div>
 
-<section class="event-form">
+<section class="event-form form">
   <%= form_for @event  do |t| %>
-
+    <%= t.label "Event Name:" %><br>
     <%= t.text_field "title", value: @event.title, placeholder: "Event Name"%><br>
-
+    <%= t.label "Hash tag to track:" %><br>
     <%= t.text_field "hash_tag", value: @event.hash_tag, placeholder: "Event HashTag (without the #)" %><br>
     <%= t.submit %>
   <% end%>

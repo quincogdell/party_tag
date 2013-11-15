@@ -2,6 +2,11 @@
 
 <div class="userevents">
   <h1 id='events-header'>EVENTS</h1>
+  <%= form_for @event  do |t| %>
+    <%= t.text_field "title", placeholder: "Event Name"%>
+    <%= t.text_field "hash_tag", placeholder: "Event HashTag (without the #)" %>
+    <%= t.submit "Create New Event"%>
+  <% end%>
   <% @events.each do |event| %>
     <div class='event-container'>
     <h2 class="title-header"><%= event.title %></h2>

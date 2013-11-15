@@ -1,27 +1,9 @@
-<div class="nav second" id="second">
+
   <div id="javascript-info" class="hidden"
   data-userid=<%= @current_user_id %>
   data-eventid=<%=@event.id%>
   data-hash-tags=<%= @event.hash_tag %>></div>
-  <h2><%= @event.title %></h2>
-  <ul>
-    <li>
-      <strong>At:</strong>
-      <%= @event.location %>
-    </li>
-    <li>
-      <strong>On:</strong>
-      <%= "#{@event.date}" %>
-    </li>
-    <li>
-      <strong>tracked tag:</strong>
-      <%= @event.hash_tag %>
-    </li>
-    <li>
-      <%= link_to "edit", "/events/#{@event.id}/edit" %>
-    </li>
-  </ul>
-</div>
+
 <div id="nav-case"></div>
 <div id="container">
   <div id="tabs">
@@ -29,12 +11,14 @@
       <ul>
         <div id="save-button">
           <div id="saved">Successfully Saved!</div>
-            <div id="button">Save This Collage</div>
+            <div id="button"><a>Save This Collage</a></div>
         </div>
         <li><a href="#tabs-1">Instagrams</a></li>
         <li><a href="#tabs-2">Tweets</a></li>
         <li><a href="#tabs-3">Palettes</a></li>
       </ul>
+      <a href=<%= "/events/#{@event.id}/edit" %>><strong>tracked tag:</strong></a>
+      <%= @event.hash_tag %>
     </div>
     <div id="tab-clear"></div>
     <div id="tabs-div">

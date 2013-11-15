@@ -13,19 +13,19 @@ body {
 }
 .nav h2 {
   margin-left: 20px;
-  margin-top: 18px;
+  margin-top: 20px;
   float: left;
 }
 .nav a {
   color: #bdc3c7;
 }
 .nav ul {
+  float: right;
   text-align: right;
 }
 .nav li {
   padding-top: 25px;
   padding-bottom: 5px;
-  text-align: right;
   display: inline-block;
   margin-right: 15px;
   font-size: 18px;
@@ -35,23 +35,23 @@ body {
   padding: 0px;
   font-size: 16px;
 }
-.second h2 {
-  margin-top: 10px;
-  padding: 0px;
-  padding-left: 10%;
-  margin-bottom: 5px;
-}
 .nav-case{
   position: static;
   min-height: 90px;
 }
 .second {
-  width: 100%;
-  margin-top: 45px;
+  float: left;
+  display: inline-block;
   color: #3DDDFF;
+}
+h2.second {
   font-size: 20px;
+  margin-top: 22px;
   padding: 0px;
-  background-color: #34495e;
+  padding-left: 25%;
+}
+.second a {
+   color: #3DDDFF;
 }
 .event-info {
   text-align: center;
@@ -127,7 +127,7 @@ text-align: center;
   border: none;
 }
 #tabs-div {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 #buttons ul li, #button {
   text-decoration: none;
@@ -140,8 +140,8 @@ text-align: center;
   border-left: 3px solid #2c3e50;
   border-right: 1px solid #2c3e50;
   border-bottom: 3px solid #2c3e50;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   padding: 1%;
   border-radius: 10px;
 }
@@ -151,8 +151,11 @@ text-align: center;
 #buttons a {
   color: black;
 }
+#buttons a:hover {
+  color: blue;
+}
 #buttons ul {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 3%;
   background-color: #2980b9;
   background-image: none;
@@ -174,4 +177,8 @@ div.palette {
 .display-canvas {
   width: 800px;
   margin: 20px 20px;
+}
+
+.form {
+  margin-top: 15px;
 }

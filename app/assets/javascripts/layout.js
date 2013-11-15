@@ -1,13 +1,11 @@
 $(document).ready(function() {
   setSize();
-  $("#canvas").on("mouseup", changeOver);
 });
 
 $(window).resize(function() {setSize();});
 var setSize = function () {
   var clear = $("#nav").height();
-  $("#second").css("margin-top", clear);
-  clear += $("#second").height();
+  clear += 10;
   $("#nav-case").css("height", clear);
   height = $(window).height() - clear;
   $("#tabs-div").css("height", height);
@@ -16,7 +14,8 @@ var setSize = function () {
   width -= 12;
   $("#tabs-div").css("width", width);
   $("#buttons").css("width", width);
-  var size = $("#buttons ul li").width()
+  $("#tabs").css("width", width);
+  var size = $("#buttons ul li").width();
   if (size/7 < 26) {
     $("#tabs ul li").css("font-size", size/7);
   };
