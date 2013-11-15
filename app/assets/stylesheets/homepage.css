@@ -23,9 +23,9 @@
 }
 
 .add-image {
-  height: 100px;
-  width: 100px;
-  margin: auto;
+  height: 50px;
+  width: 50px;
+  position: absolute;
 }
 
 .title-header {
