@@ -17,8 +17,10 @@
         <li><a href="#tabs-2">Tweets</a></li>
         <li><a href="#tabs-3">Palettes</a></li>
       </ul>
+      <div id="tag-label">
       <a href=<%= "/events/#{@event.id}/edit" %>><strong>tracked tag:</strong></a>
       <%= @event.hash_tag %>
+      </div>
     </div>
     <div id="tab-clear"></div>
     <div id="tabs-div">
