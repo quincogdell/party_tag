@@ -6,7 +6,7 @@
 
 
 
-<div class="share">
+<div class="share" id="share">
   <span>Share this #PartyTag Scrapbook on Facebook!</span>
   <div class="fb-share-button" data-href="http://www.thepartytag.com/scrapbooks/<%=@scrapbook.id%>" data-width="100px" data-type="button"></div>
 </div>
@@ -35,6 +35,8 @@ FB.ui({
   method: 'feed',
   link: 'http://www.thepartytag.com/scrapbooks/' + ,
   picture: 'http://www.thepartytag.com/scrapbooks/' + '.png',
-  name: "The Party Tag"
+  name: "The Party Tag",
   description: 'I made a scrap book using ThePartyTag!',
-}, function(response){});</script>
+}, function(response){});
+$("#share").on("click", FB.ui);
+</script>
